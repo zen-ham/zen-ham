@@ -1,7 +1,7 @@
 I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have many years experience with it. My buisness is [Zelesis AI](https://zelesis.com/), check it out.
 
 <p align="center">
-  <img width="192" height="192" src="https://github.com/python-discord/branding/blob/main/jams/retro_gaming/assets_animated/logo_spin_plain_63.gif?raw=true">
+  <img width="192" height="192" src="https://github.com/python-discord/branding/blob/main/jams/retro_gaming/assets_animated/logo_spin_plain_126.gif?raw=true">
 </p>
 
 I've been activly developing my [zhmiscellany python package](https://github.com/zen-ham/zhmiscellany) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, like a python toolbox filled with functionality that can take a 300 line script to 30.
