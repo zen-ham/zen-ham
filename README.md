@@ -5,10 +5,10 @@ I've been activly developing my [zhmiscellany python package](https://github.com
 If you wish to reach out for any reason, add me on discord: @z_h_, or [join my community](https://discord.gg/MfgBB9cPBa).
 
 <p align="center">
-  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=V4NSH4J">
+  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
 
 
 <p align="center">
-  <img width="495" height="195" src="https://github-readme-stats.vercel.app/api?username=V4NSH4J&show_icons=true&theme=radical">
+  <img width="495" height="195" src="https://github-readme-stats.vercel.app/api?username=zen-ham&show_icons=true&theme=radical">
 </p>
