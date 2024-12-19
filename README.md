@@ -9,7 +9,7 @@ I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have 
 ## My projects
 My buisness is [Zelesis AI](https://zelesis.com/), check it out.
 
----
+-
 
 I've been actively developing my [zhmiscellany python package](https://github.com/zen-ham/zhmiscellany) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, like a python toolbox filled with functionality that can take a 300 line script to 30.
 
