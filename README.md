@@ -33,7 +33,7 @@ Apollo released his robotics simulation project.
 ### Day 3 Projects:
 
 [![ ](https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github)](https://github.com/zen-ham/tales_of_zenmania_2)\
-I liked Apollo's Tales of Zenmania game so much that I decided to create and release my own version, introducing many new game mechanics and with vastly more expansive story.
+I liked Apollo's Tales of Zenmania game so much that I decided to create and release my own version, introducing many new game mechanics and with a vastly more expansive story.
 
 [![DJ CHIP](https://img.shields.io/badge/GitHub-DJ_CHIP-blue?logo=github)](https://github.com/Ubuntufanboy/DJ-CHIP)\
 Apollo developed DJ CHIP, an 8 bit sound emulator. Turns MIDI files into true 8 bit wave files.
