@@ -12,7 +12,7 @@ My buisness is [Zelesis AI](https://zelesis.com/), check it out.
 I've been actively developing my [zhmiscellany python package](https://github.com/zen-ham/zhmiscellany) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30.
 
 ## Open Source Week
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/zen-ham/zhmiscellany)
+[![zhmiscellany Python package](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/zen-ham/zhmiscellany)
 
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_, or [join my community](https://discord.gg/MfgBB9cPBa).
