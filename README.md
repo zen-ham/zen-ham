@@ -16,8 +16,51 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
 
 Day 1 Projects:
 
-To start things off for day 1 I chose to bring the documentation for my python package full up to date, and behind the scenes upgrade my workflow to keep it that way.\
-[![ ](https://img.shields.io/badge/GitHub-zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany?tab=readme-ov-file#zhmiscellany)
+[![ ](https://img.shields.io/badge/GitHub-zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany?tab=readme-ov-file#zhmiscellany)\
+To start things off for day 1 I chose to bring the documentation for my python package full up to date, and behind the scenes upgrade my workflow to keep it that way.
+
+[![Tales of Zenmania](https://img.shields.io/badge/GitHub-Tales_of_Zenmania-blue?logo=github)](https://github.com/Ubuntufanboy/tales-of-zenmania)\
+Apollo kicked off with a text adventure game project.
+
+---
+
+Day 2 Projects:
+
+[![garrysmod_workshop_scripts](https://img.shields.io/badge/GitHub-GarrysMod_Workshop_Scripts-blue?logo=github)](https://github.com/zen-ham/garrysmod_workshop_scripts)\
+For day 2, I slightly refined and released my collection of Garry's Mod scripts, mainly improving their usability.
+
+[![Robot Simulation](https://img.shields.io/badge/GitHub-Robot_Simulation-blue?logo=github)](https://github.com/Ubuntufanboy/robot-simulation)\
+Apollo released his robotics simulation project.
+
+---
+
+Day 3 Projects:
+
+[![Tales of Zenmania 2](https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github)](https://github.com/zen-ham/tales_of_zenmania_2)\
+I liked Apollo's Tales of Zenmania game so much that I decided to create and release my own version, introducing many new game mechanics and with vastly more expansive story.
+
+[![DJ CHIP](https://img.shields.io/badge/GitHub-DJ_CHIP-blue?logo=github)](https://github.com/Ubuntufanboy/DJ-CHIP)\
+Apollo developed DJ CHIP, an 8 bit sound emulator. Turns MIDI files into true 8 bit wave files.
+
+---
+
+Day 4 Projects:
+
+[![local_llm_agent](https://img.shields.io/badge/GitHub-Local_LLM_Agent-blue?logo=github)](https://github.com/zen-ham/local_llm_agent)\
+I cleaned up the codebase released my local LLM agent project that'd been sitting for a while. It basically allows LLMs to do tasks for you on your pc.
+
+[![Zenith](https://img.shields.io/badge/GitHub-Zenith-blue?logo=github)](https://github.com/Ubuntufanboy/Zenith)\
+Apollo released Zenith, An AI interpreter language based off BASIC.
+
+---
+
+Day 5 Projects:
+
+[![Search OCR](https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github)](https://github.com/zen-ham/Search-OCR)\
+For the final day, I worked on my image OCR and search engine tool, basically a search engine but for text in the images that are on your pc.
+
+[![Helios](https://img.shields.io/badge/GitHub-Helios-blue?logo=github)](https://github.com/Ubuntufanboy/Helios)\
+Apollo wrapped up with Helios, an 8 bit console with custom ISA, Audio engine, Visual engine, and assembler.
 
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_, or [join my community](https://discord.gg/MfgBB9cPBa).
