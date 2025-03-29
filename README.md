@@ -16,7 +16,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
 
 ### Day 1 Projects:
 
-[![ ](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany)\
+[![ ](https://img.shields.io/badge/Zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany)\
 To start things off for day 1 I chose to bring the documentation for my python package full up to date, and behind the scenes upgrade my workflow to keep it that way.
 
 [![ ](https://img.shields.io/badge/GitHub-Tales_of_Zenmania-blue?logo=github)](https://github.com/Ubuntufanboy/tales-of-zenmania)\
