@@ -49,7 +49,7 @@ Apollo released Zenith, An AI interpreter language based off BASIC.
 ### Day 5 Projects:
 
 [![ ](https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github)](https://github.com/zen-ham/Search-OCR)\
-For the final day, I worked on my image OCR and search engine tool, basically a search engine but for text in the images that are on your pc.
+For the final day, I polished and released my image OCR and search engine tool, basically a search engine but for text in the images that are on your pc.
 
 [![ ](https://img.shields.io/badge/GitHub-Helios-blue?logo=github)](https://github.com/Ubuntufanboy/Helios)\
 Apollo wrapped up with Helios, an 8 bit console with custom ISA, Audio engine, Visual engine, and assembler.
