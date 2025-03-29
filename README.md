@@ -11,7 +11,7 @@ My buisness is [Zelesis AI](https://zelesis.com/), check it out.
 
 I've been actively developing my [zhmiscellany python package](https://github.com/zen-ham/zhmiscellany) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30.
 
-# [![ ](https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative)](https://github.com/zen-ham/zen-ham/tree/main#open-source-week)
+## Open Source Week
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
 ### Day 1 Projects:
