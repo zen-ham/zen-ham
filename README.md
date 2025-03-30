@@ -62,7 +62,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 ### ⠀ ⠀
 
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">[![ ](https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative)](https://github.com/zen-ham#-)</h2>
+# [![ ](https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative)](https://github.com/zen-ham#-)
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
@@ -154,7 +154,8 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 
 <div align="center">
 
-<!-- [![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=onedark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy) -->
+[![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=chartreuse-dark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
+
 <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 
 </div>
