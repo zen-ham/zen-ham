@@ -152,6 +152,10 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
   <img height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
 </div>
 
+<div style="display: flex; justify-content: center; gap: 2rem;">
+  <img height="215em" alt="zen-ham's github stats" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
+  <img height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
+</div>
 
 <div align="center">
 
