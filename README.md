@@ -150,11 +150,10 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 <p align="center">
   <img height="215em" alt="zen-ham's github stats" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
   <img height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
+  [![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=2&column=3)](https://github.com/ryo-ma/github-profile-trophy)
 </p>
 
 <div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=1&column=4)](https://github.com/ryo-ma/github-profile-trophy)
 
 <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 
