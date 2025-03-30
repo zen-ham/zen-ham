@@ -154,7 +154,7 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 
 <div align="center">
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=chartreuse-dark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=chartreuse-dark&row=1&column=4)](https://github.com/ryo-ma/github-profile-trophy)
 
 <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 
