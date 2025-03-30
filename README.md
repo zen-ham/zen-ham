@@ -60,6 +60,10 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 </td></tr></table>
 
+<p align="center">
+img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" style="width:100%;" />
+</p>
+
 ### ⠀ ⠀
 
 <h1 align="center" style="margin: 20px 0;">
@@ -147,8 +151,6 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=zen-ham&theme=chartreuse-dark" style="width:100%;" />
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=blueviolet&label=PROFILE+VIEWS">
 </p>
-
-![Contribution Snake](https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg)
 
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_.
