@@ -159,6 +159,3 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 <p align="center">
   <img width="192" height="192" src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true">
 </p>
-
-![](under-construction.gif)
-![](counter.gif) ![](badge1.gif) ![](badge2.gif) ![](badge3.png) ![](badge4.gif) ![](badge5.gif) ![](badge6.gif)
