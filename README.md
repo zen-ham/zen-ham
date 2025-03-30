@@ -70,9 +70,8 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 <a href="https://github.com/zen-ham/zen-ham/blob/main/README.md#-" target="_blank">
 <img src="https://img.shields.io/badge/open source week-%23FFFFFF.svg?&style=for-the-badge&logo=opensourceinitiative&logoColor=darkgreen" alt="open source week" style="margin-bottom: 5px;" />
 </a>
+<span>This text appears on the same line.</span>
 </div>
-
-[![Open Source Week](https://img.shields.io/badge/open source week-%23FFFFFF.svg?&style=for-the-badge&logo=opensourceinitiative&logoColor=darkgreen)](https://github.com/zen-ham/zen-ham/blob/main/README.md#-)
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
