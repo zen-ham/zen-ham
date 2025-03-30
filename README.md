@@ -113,6 +113,18 @@ Apollo wrapped up with Helios, an 8 bit console with custom ISA, Audio engine, V
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_, or [join my community](https://discord.gg/MfgBB9cPBa).
 
+<div align="center">
+<a href="https://github.com/zen-ham" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.youtube.com/user/@zh9664" target="_blank">
+<img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
+</a>  
+</div>  
+  
+
+<br/>  
+
 ---
 <p align="center">
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
