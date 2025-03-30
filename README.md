@@ -166,7 +166,3 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 <img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
 </a>  
 </div>
-
-
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9JyM4OGY5ZmYnLz48L3N2Zz4=" 
-     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" />
