@@ -154,6 +154,6 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 
 <div align="center">
 <img src="https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=1&column=3" />
-<img src="https://streak-stats.demolab.com?user=zen-ham&theme=neon-palenight" />
+<img src="https://streak-stats.demolab.com?user=zen-ham&theme=chartreuse-dark" />
 <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </div>
