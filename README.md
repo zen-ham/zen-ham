@@ -146,10 +146,10 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 </div>
 
 # 
-
+chartreuse-dark
 <p align="center">
-   <img height="215em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
-   <img height="215em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=chartreuse-dark" />
+   <img height="215em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=matrix&show_icons=true" />
+   <img height="215em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=matrix" />
 </p>
 
 <div align="center">
