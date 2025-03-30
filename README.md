@@ -75,7 +75,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <tr>
     <td align="center"><b>Day 1</b></td>
     <td>
-      <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="Zhmiscellany"></a> <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/pypi/dy/zhmiscellany?label=PyPI%20Downloads" alt="Zhmiscellany"></a> <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social" alt="Zhmiscellany"></a>
+      <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="Zhmiscellany"></a> <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/pypi/dm/zhmiscellany?label=PyPI%20Downloads" alt="Zhmiscellany"></a> <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social" alt="Zhmiscellany"></a>
       <p><small>Updated documentation for my Python package and improved my workflow to maintain it.</small></p>
     </td>
     <td>
