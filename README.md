@@ -70,12 +70,13 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 <div align="center">
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=onedark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
 <p align="center">
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
+
+</div>
+
+
 
 
 ### ⠀ ⠀
