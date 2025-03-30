@@ -150,7 +150,7 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 <p align="center">
   <img height="215em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
   <img height="215em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
-  <img height="215em" src="https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=2&column=2" />
+  <img height="215em" src="https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=4&column=1" />
 </p>
 
 <div align="center">
