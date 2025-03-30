@@ -12,7 +12,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 <br/>  
 
 
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">My Skill Set</h2>
+<h1 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{lightgreen}My\ Skill\ Set}$$</h1>
 <table><tr><td valign="top" width="33%">
 
 
