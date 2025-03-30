@@ -166,5 +166,3 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 <img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
 </a>  
 </div>
-
-$${\color{red}Welcome} \space {\color{lightblue}To } \space {\color{lightgreen}Github}$$
