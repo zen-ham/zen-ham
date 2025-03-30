@@ -152,10 +152,12 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=000000&label_color=00ff00&label=Profile+Views">
 </p>
 
-## Contact
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{white}Contact}$$</h2>
+<div style="text-align: center;">
 If you wish to reach out for any reason, add me on discord: @z_h_.
+</div>
 
-<div align="left">
+<div align="center">
 <a href="https://github.com/zen-ham" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
 </a>
