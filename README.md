@@ -58,6 +58,23 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 <a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" /></a>  
 </div>
 
+
+<p align="center">
+  <img height="215em" alt="zen-ham's github stats" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
+  <img height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
+</p>
+
+<div align="center">
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=onedark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
+
+</div>
+
+<p align="center">
+  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
+</p>
+
+
 </td></tr></table>  
 
 ### ⠀ ⠀
@@ -146,21 +163,6 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 </div>
 
 # 
-
-<p align="center">
-  <img height="215em" alt="zen-ham's github stats" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
-  <img height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
-</p>
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=onedark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
-<p align="center">
-  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
-</p>
 
 <p align="center">
   <img width="192" height="192" src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true">
