@@ -71,45 +71,68 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 ## Open Source Week
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
-### Day 1 Projects:
-
-[![ ](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany)\
-To start things off for day 1 I chose to bring the documentation for my python package full up to date, and behind the scenes upgrade my workflow to keep it that way.
-
-[![ ](https://img.shields.io/badge/GitHub-Tales_of_Zenmania-blue?logo=github)](https://github.com/Ubuntufanboy/tales-of-zenmania)\
-Apollo kicked off with a text adventure game project.
-
-### Day 2 Projects:
-
-[![ ](https://img.shields.io/badge/GitHub-GarrysMod_Workshop_Scripts-blue?logo=github)](https://github.com/zen-ham/garrysmod_workshop_scripts)\
-For day 2, I slightly refined and released my collection of Garry's Mod scripts, mainly improving their usability.
-
-[![ ](https://img.shields.io/badge/GitHub-Robot_Simulation-blue?logo=github)](https://github.com/Ubuntufanboy/robot-simulation)\
-Apollo released his robotics simulation project.
-
-### Day 3 Projects:
-
-[![ ](https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github)](https://github.com/zen-ham/tales_of_zenmania_2)\
-I liked Apollo's Tales of Zenmania game so much that I decided to create and release my own version, introducing many new game mechanics and with a vastly more expansive story.
-
-[![DJ CHIP](https://img.shields.io/badge/GitHub-DJ_CHIP-blue?logo=github)](https://github.com/Ubuntufanboy/DJ-CHIP)\
-Apollo developed DJ CHIP, an 8 bit sound emulator. Turns MIDI files into true 8 bit wave files.
-
-### Day 4 Projects:
-
-[![ ](https://img.shields.io/badge/GitHub-Local_LLM_Agent-blue?logo=github)](https://github.com/zen-ham/local_llm_agent)\
-I cleaned up the codebase released my local LLM agent project that'd been sitting for a while. It basically allows LLMs to do tasks for you on your pc.
-
-[![ ](https://img.shields.io/badge/GitHub-Zenith-blue?logo=github)](https://github.com/Ubuntufanboy/Zenith)\
-Apollo released Zenith, An AI interpreter language based off BASIC.
-
-### Day 5 Projects:
-
-[![ ](https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github)](https://github.com/zen-ham/Search-OCR)\
-For the final day, I polished and released my image OCR and search engine tool, basically a search engine but for text in the images that are on your pc.
-
-[![ ](https://img.shields.io/badge/GitHub-Helios-blue?logo=github)](https://github.com/Ubuntufanboy/Helios)\
-Apollo wrapped up with Helios, an 8 bit console with custom ISA, Audio engine, Visual engine, and assembler.
+<table>
+  <tr>
+    <th align="center">Day</th>
+    <th align="center">My Project</th>
+    <th align="center">Apollo's Project</th>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 1</b></td>
+    <td>
+      <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="Zhmiscellany"></a>
+      <p><small>Updated documentation for my Python package and improved my workflow to maintain it.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/tales-of-zenmania"><img src="https://img.shields.io/badge/GitHub-Tales_of_Zenmania-blue?logo=github" alt="Tales of Zenmania"></a>
+      <p><small>A text adventure game project.</small></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 2</b></td>
+    <td>
+      <a href="https://github.com/zen-ham/garrysmod_workshop_scripts"><img src="https://img.shields.io/badge/GitHub-GarrysMod_Workshop_Scripts-blue?logo=github" alt="Garry's Mod Workshop Scripts"></a>
+      <p><small>Refined and released my collection of Garry's Mod scripts with improved usability.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/robot-simulation"><img src="https://img.shields.io/badge/GitHub-Robot_Simulation-blue?logo=github" alt="Robot Simulation"></a>
+      <p><small>A robotics simulation project.</small></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 3</b></td>
+    <td>
+      <a href="https://github.com/zen-ham/tales_of_zenmania_2"><img src="https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github" alt="Tales of Zenmania 2"></a>
+      <p><small>My own version of Tales of Zenmania with new game mechanics and an expansive story.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/DJ-CHIP"><img src="https://img.shields.io/badge/GitHub-DJ_CHIP-blue?logo=github" alt="DJ CHIP"></a>
+      <p><small>An 8-bit sound emulator that converts MIDI files into true 8-bit wave files.</small></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 4</b></td>
+    <td>
+      <a href="https://github.com/zen-ham/local_llm_agent"><img src="https://img.shields.io/badge/GitHub-Local_LLM_Agent-blue?logo=github" alt="Local LLM Agent"></a>
+      <p><small>A local LLM agent that allows AI models to perform tasks on your PC.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/Zenith"><img src="https://img.shields.io/badge/GitHub-Zenith-blue?logo=github" alt="Zenith"></a>
+      <p><small>An AI interpreter language based on BASIC.</small></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 5</b></td>
+    <td>
+      <a href="https://github.com/zen-ham/Search-OCR"><img src="https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github" alt="Search OCR"></a>
+      <p><small>An image OCR and search engine tool for finding text within images on your PC.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/Helios"><img src="https://img.shields.io/badge/GitHub-Helios-blue?logo=github" alt="Helios"></a>
+      <p><small>An 8-bit console with custom ISA, audio engine, visual engine, and assembler.</small></p>
+    </td>
+  </tr>
+</table>
 
 
 ## Contact
