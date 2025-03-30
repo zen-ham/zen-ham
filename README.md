@@ -152,9 +152,14 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
   <img height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
 </div>
 
+
+<div align="center">
+
 [![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=onedark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
 
-<p align="left">
+</div>
+
+<p align="center">
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
 
