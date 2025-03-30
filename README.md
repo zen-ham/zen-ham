@@ -64,6 +64,16 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 # [![ ](https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative)](https://github.com/zen-ham#-)
 
+<h1 align="center" style="margin: 20px 0;">
+  <a href="https://github.com/zen-ham#-" style="text-decoration: none;">
+    <img 
+      src="https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative" 
+      alt="Open Source Week"
+      style="box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); border-radius: 10px;"
+    >
+  </a>
+</h1>
+
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
 <table>
@@ -128,7 +138,6 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
     </td>
   </tr>
 </table>
-
 
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_.
