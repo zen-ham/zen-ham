@@ -148,6 +148,8 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=blueviolet&label=PROFILE+VIEWS">
 </p>
 
+![Contribution Snake](https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg)
+
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_.
 
