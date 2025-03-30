@@ -129,11 +129,10 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 <br/>  
 
 ---
-<p align="center">
-  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
-</p>
-
 
 <p align="center">
   <img width="495" height="195" src="https://github-readme-stats.vercel.app/api?username=zen-ham&show_icons=true&theme=radical">
+</p>
+<p align="center">
+  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
