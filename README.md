@@ -151,12 +151,12 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 
 # 
 
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <img height="215em" alt="zen-ham's github stats" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
   <img height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
 </div>
 
-<!-- Centered counter (now guaranteed below) -->
-<p align="center">
+<!-- Centered counter below -->
+<p align="center" style="margin-top: 20px;">
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
