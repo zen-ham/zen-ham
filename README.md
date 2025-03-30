@@ -155,3 +155,5 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=zen-ham&theme=chartreuse-dark" style="width:100%;" />
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
+
+![Wakatime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=zen-ham&theme=dark&hide_border=true)
