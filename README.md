@@ -62,7 +62,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 ### ⠀ ⠀
 
-# [![ ](https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative)](https://github.com/zen-ham#-)
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">[![ ](https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative)](https://github.com/zen-ham#-)</h2>
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
