@@ -62,6 +62,8 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 ### ⠀ ⠀
 
+![PyPI Downloads](https://img.shields.io/pypi/dm/zhmiscellany?label=PyPI%20Downloads)
+
 # [![ ](https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative)](https://github.com/zen-ham#-)
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
@@ -155,5 +157,3 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=zen-ham&theme=chartreuse-dark" style="width:100%;" />
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
-
-![PyPI Downloads](https://img.shields.io/pypi/dm/zhmiscellany?label=PyPI%20Downloads)
