@@ -155,3 +155,5 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
   <img height="215em" src="https://github-readme-activity-graph.vercel.app/graph?username=zen-ham&theme=chartreuse-dark" />
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
+
+![Terminal](https://raw.githubusercontent.com/zen-ham/zen-ham/main/assets/terminal.gif)
