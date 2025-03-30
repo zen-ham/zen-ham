@@ -72,7 +72,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 </a>
 </div>
 
--
+---
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
