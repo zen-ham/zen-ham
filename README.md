@@ -60,6 +60,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 </td></tr></table>  
 
+## ⠀
 
 <p align="center">
   <img height="215em" alt="zen-ham's github stats" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
