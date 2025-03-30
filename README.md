@@ -1,4 +1,4 @@
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">A bit about me</h2>
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\color{green}A bit about me}$$</h2>
 
 I'm a developer. In order of skill, I'd say I know Python, Java, Rust, HTML, JS and C++, but I use Python daily, and have many years experience with it. [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
 
