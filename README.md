@@ -4,9 +4,7 @@ I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have 
 
 [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
 <p align="center">
-  <video autoplay loop muted playsinline width="192" height="192">
-    <source src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true" type="video/mp4">
-  </video>
+  <img width="192" height="192" src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true">
 </p>
 
 ## My projects
