@@ -2,12 +2,12 @@
 
 I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have many years experience with it.
 
-<table>
-  <tr>
-    <td>[![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)</td>
-    <td align="center"><img width="192" height="192" src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true"></td>
-  </tr>
-</table>
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <a href="https://github.com/zen-ham">
+    <img src="https://img.shields.io/github/followers/zen-ham?label=Follow&style=social" alt="Github">
+  </a>
+  <img width="192" height="192" src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true">
+</div>
 
 ## My projects
 My buisness is [Zelesis AI](https://zelesis.com/), check it out.
