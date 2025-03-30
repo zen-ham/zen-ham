@@ -111,7 +111,7 @@ For the final day, I polished and released my image OCR and search engine tool, 
 Apollo wrapped up with Helios, an 8 bit console with custom ISA, Audio engine, Visual engine, and assembler.
 
 ## Contact
-If you wish to reach out for any reason, add me on discord: @z_h_, or [join my community](https://discord.gg/MfgBB9cPBa).
+If you wish to reach out for any reason, add me on discord: @z_h_.
 
 <div align="center">
 <a href="https://github.com/zen-ham" target="_blank">
@@ -121,7 +121,12 @@ If you wish to reach out for any reason, add me on discord: @z_h_, or [join my c
 <img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
 </a>  
 </div>  
-  
+<div align="center">
+  <a href="https://discord.gg/MfgBB9cPBa" target="_blank">
+    <img src="https://img.shields.io/badge/discord-%2371D1FF.svg?&style=for-the-badge&logo=discord&logoColor=white" alt="discord" style="margin-bottom: 5px;" />
+  </a>
+</div>
+
 
 <br/>  
 
