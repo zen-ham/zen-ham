@@ -61,7 +61,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 </td></tr></table>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" style="width:100%;" />
+  <img src="https://raw.githubusercontent.com/zen-ham/zen-ham/output/github-contribution-grid-snake-dark.svg" style="width:100%;" />
 </p>
 
 ### ⠀ ⠀
