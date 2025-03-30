@@ -2,7 +2,7 @@
 
 I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have many years experience with it.
 
-<div style="display: flex; align-items: center; justify-content: space-between;">
+<div style="display: flex; align-items: center; justify-content: center;">
   <a href="https://github.com/zen-ham">
     <img src="https://img.shields.io/github/followers/zen-ham?label=Follow&style=social" alt="Github">
   </a>
