@@ -125,9 +125,6 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 </a>  
 </div>
 
-
-<br/>  
-
 # 
 
 <p align="center">
