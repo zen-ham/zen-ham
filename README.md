@@ -58,6 +58,8 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 <a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" /></a>  
 </div>
 
+</td></tr></table>  
+
 
 <p align="center">
   <img height="215em" alt="zen-ham's github stats" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
@@ -74,8 +76,6 @@ I've been actively developing my [zhmiscellany python package](https://github.co
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
 
-
-</td></tr></table>  
 
 ### ⠀ ⠀
 
