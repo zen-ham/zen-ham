@@ -1,5 +1,7 @@
 ## A bit about me
 
+[![Github](https://img.shields.io/github/followers/mattn?label=Follow&style=social)](https://github.com/mattn)
+
 I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have many years experience with it.
 
 <p align="center">
