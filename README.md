@@ -1,12 +1,10 @@
 ## A bit about me
 
-[![Github](https://img.shields.io/github/followers/mattn?label=Follow&style=social)](https://github.com/mattn)
-
 I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have many years experience with it.
 
 <p align="center">
   <img width="192" height="192" src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true">
-</p>
+</p>[![Github](https://img.shields.io/github/followers/mattn?label=Follow&style=social)](https://github.com/mattn)
 
 ## My projects
 My buisness is [Zelesis AI](https://zelesis.com/), check it out.
