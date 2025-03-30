@@ -141,7 +141,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   </tr>
 </table>
 
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">Stats</h2>
+<h1 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{lightgreen}Stats}$$</h1>
 
 <p align="center">
   <img height="170em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
