@@ -148,13 +148,11 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 # 
 
 <p align="center">
-  <img height="215em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=radical" />
-  <img height="215em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
+   <img height="215em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
+   <img height="215em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=chartreuse-dark" />
 </p>
 
 <div align="center">
 <img src="https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=1&column=3" />
 <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </div>
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=radical)
