@@ -64,8 +64,6 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 </td></tr></table>  
 
-<br/>  
-
 # ⠀
 
 <div align="left">
