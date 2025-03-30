@@ -68,102 +68,48 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 
 
-<br/>  
-
-## Open Source Week  
+## Open Source Week
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
-<table>
-  <tr>
-    <td valign="top" width="33%">
+### Day 1 Projects:
 
-      ### Day 1 Projects:
-      <div align="center">
-        <a href="https://github.com/zen-ham/zhmiscellany" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        To start things off for day 1 I chose to bring the documentation for my python package full up to date, and behind the scenes upgrade my workflow to keep it that way.
+[![ ](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany)\
+To start things off for day 1 I chose to bring the documentation for my python package full up to date, and behind the scenes upgrade my workflow to keep it that way.
 
-        <a href="https://github.com/Ubuntufanboy/tales-of-zenmania" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-Tales_of_Zenmania-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        Apollo kicked off with a text adventure game project.
-      </div>
+[![ ](https://img.shields.io/badge/GitHub-Tales_of_Zenmania-blue?logo=github)](https://github.com/Ubuntufanboy/tales-of-zenmania)\
+Apollo kicked off with a text adventure game project.
 
-    </td>
-    <td valign="top" width="33%">
+### Day 2 Projects:
 
-      ### Day 2 Projects:
-      <div align="center">
-        <a href="https://github.com/zen-ham/garrysmod_workshop_scripts" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-GarrysMod_Workshop_Scripts-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        For day 2, I slightly refined and released my collection of Garry's Mod scripts, mainly improving their usability.
+[![ ](https://img.shields.io/badge/GitHub-GarrysMod_Workshop_Scripts-blue?logo=github)](https://github.com/zen-ham/garrysmod_workshop_scripts)\
+For day 2, I slightly refined and released my collection of Garry's Mod scripts, mainly improving their usability.
 
-        <a href="https://github.com/Ubuntufanboy/robot-simulation" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-Robot_Simulation-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        Apollo released his robotics simulation project.
-      </div>
+[![ ](https://img.shields.io/badge/GitHub-Robot_Simulation-blue?logo=github)](https://github.com/Ubuntufanboy/robot-simulation)\
+Apollo released his robotics simulation project.
 
-    </td>
-    <td valign="top" width="33%">
+### Day 3 Projects:
 
-      ### Day 3 Projects:
-      <div align="center">
-        <a href="https://github.com/zen-ham/tales_of_zenmania_2" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        I liked Apollo's Tales of Zenmania game so much that I decided to create and release my own version, introducing many new game mechanics and with a vastly more expansive story.
+[![ ](https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github)](https://github.com/zen-ham/tales_of_zenmania_2)\
+I liked Apollo's Tales of Zenmania game so much that I decided to create and release my own version, introducing many new game mechanics and with a vastly more expansive story.
 
-        <a href="https://github.com/Ubuntufanboy/DJ-CHIP" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-DJ_CHIP-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        Apollo developed DJ CHIP, an 8 bit sound emulator. Turns MIDI files into true 8 bit wave files.
-      </div>
+[![DJ CHIP](https://img.shields.io/badge/GitHub-DJ_CHIP-blue?logo=github)](https://github.com/Ubuntufanboy/DJ-CHIP)\
+Apollo developed DJ CHIP, an 8 bit sound emulator. Turns MIDI files into true 8 bit wave files.
 
-    </td>
-  </tr>
-  <tr>
-    <td valign="top" width="33%">
+### Day 4 Projects:
 
-      ### Day 4 Projects:
-      <div align="center">
-        <a href="https://github.com/zen-ham/local_llm_agent" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-Local_LLM_Agent-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        I cleaned up the codebase released my local LLM agent project that'd been sitting for a while. It basically allows LLMs to do tasks for you on your pc.
+[![ ](https://img.shields.io/badge/GitHub-Local_LLM_Agent-blue?logo=github)](https://github.com/zen-ham/local_llm_agent)\
+I cleaned up the codebase released my local LLM agent project that'd been sitting for a while. It basically allows LLMs to do tasks for you on your pc.
 
-        <a href="https://github.com/Ubuntufanboy/Zenith" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-Zenith-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        Apollo released Zenith, An AI interpreter language based off BASIC.
-      </div>
+[![ ](https://img.shields.io/badge/GitHub-Zenith-blue?logo=github)](https://github.com/Ubuntufanboy/Zenith)\
+Apollo released Zenith, An AI interpreter language based off BASIC.
 
-    </td>
-    <td valign="top" width="33%">
+### Day 5 Projects:
 
-      ### Day 5 Projects:
-      <div align="center">
-        <a href="https://github.com/zen-ham/Search-OCR" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        For the final day, I polished and released my image OCR and search engine tool, basically a search engine but for text in the images that are on your pc.
+[![ ](https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github)](https://github.com/zen-ham/Search-OCR)\
+For the final day, I polished and released my image OCR and search engine tool, basically a search engine but for text in the images that are on your pc.
 
-        <a href="https://github.com/Ubuntufanboy/Helios" target="_blank">
-          <img style="margin: 10px" src="https://img.shields.io/badge/GitHub-Helios-blue?logo=github" alt="GitHub" height="50" />
-        </a>
-        Apollo wrapped up with Helios, an 8 bit console with custom ISA, Audio engine, Visual engine, and assembler.
-      </div>
-
-    </td>
-    <td valign="top" width="33%">
-
-    </td>
-  </tr>
-</table>  
-
-<br/>
+[![ ](https://img.shields.io/badge/GitHub-Helios-blue?logo=github)](https://github.com/Ubuntufanboy/Helios)\
+Apollo wrapped up with Helios, an 8 bit console with custom ISA, Audio engine, Visual engine, and assembler.
 
 
 ## Contact
