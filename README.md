@@ -154,7 +154,7 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 
 <div align="center">
 
-<img height="215em" src="https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=10&column=10" />
+<img height="215em" src="https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=1&column=3" />
 <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 
 </div>
