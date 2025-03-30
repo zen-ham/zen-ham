@@ -148,10 +148,10 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 # 
 
 <p align="center">
-  <img height="150em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
-  <img height="150em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=chartreuse-dark" />
-  <img height="150em" src="https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=2&column=2" />
-  <img height="150em" src="https://streak-stats.demolab.com?user=zen-ham&theme=chartreuse-dark" />
+  <img height="170em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
+  <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=chartreuse-dark" />
+  <img height="170em" src="https://github-profile-trophy.vercel.app/?username=zen-ham&theme=matrix&row=2&column=2" />
+  <img height="170em" src="https://streak-stats.demolab.com?user=zen-ham&theme=chartreuse-dark" />
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=zen-ham&theme=chartreuse-dark" style="width:100%;" />
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
