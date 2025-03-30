@@ -72,7 +72,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 </a>
 </div>
 
-<div style="border-top:1px solid #e0e0e0; margin:0; padding:0; width:100%;"></div>
+<div style="border-top:1px solid #e0e0e0; margin:1px; padding:1px; width:100%;"></div>
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
