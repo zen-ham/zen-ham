@@ -66,13 +66,11 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 ### ⠀
 
-<div align="left">
+# <div align="left">
 <a href="https://www.youtube.com/@zh9664" target="_blank">
 <img src="https://img.shields.io/badge/open source week-%23FFFFFF.svg?&style=for-the-badge&logo=opensourceinitiative&logoColor=darkgreen" alt="open source week" style="margin-bottom: 5px;" />
 </a>
 </div>
-
-<div style="border-top:1px solid #e0e0e0; margin:1px; padding:1px; width:100%;"></div>
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
