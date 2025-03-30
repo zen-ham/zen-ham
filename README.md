@@ -155,7 +155,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_.
 
-![Star History](https://api.star-history.com/svg?repos=zen-ham/your-repo&type=Date)
+![Star History](https://api.star-history.com/svg?repos=zen-ham/zhmiscellany&type=Date)
 
 <div align="left">
 <a href="https://github.com/zen-ham" target="_blank">
