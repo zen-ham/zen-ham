@@ -148,6 +148,9 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 <a href="https://www.youtube.com/@zh9664" target="_blank">
 <img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
 </a>  
+<a href="https://www.youtube.com/@zh9664" target="_blank">
+<img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=opensourceinitiative&logoColor=darkgreen alt=youtube style="margin-bottom: 5px;" />
+</a>  
 </div>
 
 # 
