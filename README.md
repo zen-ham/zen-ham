@@ -128,7 +128,7 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 
 <br/>  
 
----
+# 
 
 <p align="center">
   <img width="495" height="195" src="https://github-readme-stats.vercel.app/api?username=zen-ham&show_icons=true&theme=radical">
