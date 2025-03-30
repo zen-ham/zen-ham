@@ -62,8 +62,6 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 
 ### ⠀ ⠀
 
-![PyPI Downloads](https://img.shields.io/pypi/dm/zhmiscellany?label=PyPI%20Downloads)
-
 # [![ ](https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative)](https://github.com/zen-ham#-)
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
@@ -77,7 +75,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <tr>
     <td align="center"><b>Day 1</b></td>
     <td>
-      <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="Zhmiscellany"></a><a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social" alt="Zhmiscellany"></a>
+      <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="Zhmiscellany"></a><a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/pypi/dm/zhmiscellany?label=PyPI%20Downloads" alt="Zhmiscellany"></a><a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social" alt="Zhmiscellany"></a>
       <p><small>Updated documentation for my Python package and improved my workflow to maintain it.</small></p>
     </td>
     <td>
