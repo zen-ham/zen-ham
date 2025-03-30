@@ -137,7 +137,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_.
 
-<div align="center">
+<div align="left">
 <a href="https://github.com/zen-ham" target="_blank">
 <img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
 </a>
@@ -155,6 +155,9 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
   <img align="left" height="215em" alt="zen-ham's github stats" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
   <img align="right" height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
 </div>
+
+
+
 <p align="center">
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 </p>
