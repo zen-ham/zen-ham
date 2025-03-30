@@ -1,4 +1,4 @@
-<h3 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{white}A\ Bit\ About\ Me}$$</h3>
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{white}A\ Bit\ About\ Me}$$</h2>
 
 I'm a developer. In order of skill, I'd say I know Python, Java, Rust, HTML, JS and C++, but I use Python daily, and have many years experience with it. [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
 
@@ -12,7 +12,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 <br/>  
 
 
-<h3 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{white}My\ Skill\ Set}$$</h3>
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{white}My\ Skill\ Set}$$</h2>
 <table><tr><td valign="top" width="33%">
 
 
@@ -141,7 +141,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   </tr>
 </table>
 
-<h3 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{green}Stats}$$</h3>
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{green}Stats}$$</h2>
 
 <p align="center">
   <img height="170em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
