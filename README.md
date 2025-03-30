@@ -156,7 +156,8 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
   <img align="right" height="215em" alt="zen-ham's top-languages stats" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zen-ham&theme=chartreuse-dark" />
 </div>
 
-# 
+<!-- Clear floats to force the next content below -->
+<div style="clear: both;"></div>
 
 <p align="center">
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
