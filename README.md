@@ -152,6 +152,8 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=black&label=PROFILE+VIEWS&style=social">
 </p>
 
+![Views](https://img.shields.io/badge/dynamic/json?url=https://komarev-api.vercel.app/zen-ham&label=PROFILE%20VIEWS&query=count&color=000000&labelColor=00ff00)
+
 ## Contact
 If you wish to reach out for any reason, add me on discord: @z_h_.
 
