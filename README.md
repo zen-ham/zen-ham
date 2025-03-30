@@ -67,7 +67,7 @@ I've been actively developing my [zhmiscellany python package](https://github.co
 ### ⠀ ⠀
 
 <div align="left">
-<a href="https://github.com/zen-ham#" target="_blank">
+<a href="https://github.com/zen-ham/zen-ham/blob/main/README.md#-" target="_blank">
 <img src="https://img.shields.io/badge/open source week-%23FFFFFF.svg?&style=for-the-badge&logo=opensourceinitiative&logoColor=darkgreen" alt="open source week" style="margin-bottom: 5px;" />
 </a>
 </div>
