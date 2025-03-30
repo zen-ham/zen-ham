@@ -1,8 +1,8 @@
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\color{green}A \space bit \space about \space me}$$</h2>
+<h1 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\color{green}A \space Bit \space About \space Me}$$</h1>
 
 I'm a developer. In order of skill, I'd say I know Python, Java, Rust, HTML, JS and C++, but I use Python daily, and have many years experience with it. [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
 
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">My Projects</h2>
+<h1 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\color{green}My \space Projects}$$</h1>
 My buisness is [Zelesis AI](https://zelesis.com/), check it out.
 
 I've been actively developing my [zhmiscellany python package](https://github.com/zen-ham/zhmiscellany) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30.
