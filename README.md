@@ -1,15 +1,6 @@
 ## A bit about me
 
-I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have many years experience with it.
-
-<div align="center">
-
-[![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
-
-</div>
-<p align="center">
-  <img width="192" height="192" src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true">
-</p>
+I'm a developer. I know Java, JS, HTML and C++ but I use Python daily, and have many years experience with it. [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
 
 ## My projects
 My buisness is [Zelesis AI](https://zelesis.com/), check it out.
@@ -164,4 +155,8 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 <!-- Centered counter (now guaranteed below) -->
 <p align="center">
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
+</p>
+
+<p align="center">
+  <img width="192" height="192" src="https://github.com/zen-ham/zen-ham/blob/main/ezgif-2-c768c797ba.gif?raw=true">
 </p>
