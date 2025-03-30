@@ -154,7 +154,7 @@ If you wish to reach out for any reason, add me on discord: @z_h_.
 
 <div align="center">
 
-<!-- Centered counter below -->[![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=onedark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy)
+<!-- [![trophy](https://github-profile-trophy.vercel.app/?username=zen-ham&theme=onedark&row=2&column=4)](https://github.com/ryo-ma/github-profile-trophy) -->
 <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham">
 
 </div>
