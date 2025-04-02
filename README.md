@@ -151,6 +151,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <img height="170em" src="https://streak-stats.demolab.com?user=zen-ham&theme=chartreuse-dark" />
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=zen-ham&theme=chartreuse-dark" style="width:100%;" />
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=000000&label_color=00ff00&label=Profile+Views">
+  <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/zh9664?style=social">
 </p>
 
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{white}Contact}$$</h2>
