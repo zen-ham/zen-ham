@@ -8,6 +8,9 @@ My company is [Zelesis AI](https://zelesis.com/), check it out.
 
 I've been actively developing my [zhmiscellany python package](https://github.com/zen-ham/zhmiscellany) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30.
 
+![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)
+![dls](https://img.shields.io/pypi/dm/zhmiscellany?label=PyPI%20Downloads)
+![stars](https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social)
 
 
 <br/>  
