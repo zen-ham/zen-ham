@@ -4,7 +4,7 @@ I'm a developer. In order of skill, I'd say I know Python, Java, Rust, HTML, JS 
 
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge\color{white}Projects}$$</h2>
 
-My buisness is [Zelesis AI](https://zelesis.com/), check it out.
+My company is [Zelesis AI](https://zelesis.com/), check it out.
 
 I've been actively developing my [zhmiscellany python package](https://github.com/zen-ham/zhmiscellany) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30.
 
