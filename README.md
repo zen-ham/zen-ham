@@ -12,7 +12,7 @@ I've been actively developing my Python package ![zhmiscellanybadge](https://img
 
 
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge What\ I\ Use}$$</h2>
-<table><tr><td valign="top" width="33%">
+<table><tr><td align="center" valign="top" width="33%">
 
 
 
