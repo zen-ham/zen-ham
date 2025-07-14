@@ -4,7 +4,7 @@ I'm a developer. In order of skill, I'd say I know Python, Java, Rust, HTML, JS 
 
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Projects}$$</h2>
 
-My company is [![zbadge](https://img.shields.io/badge/_-Zelesis-blue?style=flat&color=blue&logo=openzeppelin&logoColor=ffffff)](https://zelesis.com/) [Zelesis AI](https://zelesis.com/), check it out.
+My company is [![zbadge](https://img.shields.io/badge/a-Zelesis-blue?style=flat&color=blue&logo=openzeppelin&logoColor=ffffff)](https://zelesis.com/) [Zelesis AI](https://zelesis.com/), check it out.
 
 I've been actively developing my Python package ![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github) ![dls](https://img.shields.io/pypi/dm/zhmiscellany?label=PyPI%20Downloads) ![stars](https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30, I personally use it in practically 100% of the Python scripts I write.
 
