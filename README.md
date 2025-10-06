@@ -155,7 +155,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
 
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Contact}$$</h2>
 
-<p align="center">If you wish to reach out for any reason, add me on discord: @z_h_.</p>
+<p align="center">If you wish to reach out for any reason, add me on discord: @z_h_</p>
 
 <div align="center">
 <a href="https://github.com/zen-ham" target="_blank">
