@@ -6,6 +6,11 @@ I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and 
 
 My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out.
 
+<div align="center">
+  <img src="https://api.zelesis.com/log_analysis.png" alt="Log Analysis" width="48%" />
+  <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="48%" />
+</div>
+
 I've been actively developing my Python package ![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github) [![PyPI Downloads](https://static.pepy.tech/badge/zhmiscellany)](https://pepy.tech/projects/zhmiscellany) ![stars](https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30, I personally use it in practically 100% of the Python scripts I write.
 
 <br/>  
