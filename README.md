@@ -5,7 +5,7 @@ I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and 
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Projects}$$</h2>
 
 My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out.\
-Here's some live updating graphs to show my Zelesis userbase:
+Here's some live updating graphs to show the userbase of my software at Zelesis:
 <div align="center">
   <img src="https://api.zelesis.com/log_analysis.png" alt="Log Analysis" width="48%" />
   <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="48%" />
