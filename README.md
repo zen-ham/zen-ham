@@ -12,7 +12,7 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
 </div>
 
 \
-I've been actively developing my Python package [![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany) [![PyPI Downloads](https://static.pepy.tech/badge/zhmiscellany)](https://github.com/zen-ham/zhmiscellany) [![stars](https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social)](https://github.com/zen-ham/zhmiscellany) for over a year. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30, I personally use it in practically 100% of the Python scripts I write.
+I've been actively developing my Python package [![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany) [![PyPI Downloads](https://static.pepy.tech/badge/zhmiscellany)](https://github.com/zen-ham/zhmiscellany) [![stars](https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social)](https://github.com/zen-ham/zhmiscellany) for over 2 years. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30, I personally use it in practically 100% of the Python scripts I write.
 
 <br/>  
 
