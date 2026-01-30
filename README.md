@@ -1,5 +1,5 @@
 <!-- Effects for my custom github profile renderer, https://api.zelesis.com/github-zen-ham -->
-[ ](# "snow")
+[ ](# "!snow")
 
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge A\ Bit\ About\ Me}$$</h2>
 
