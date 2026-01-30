@@ -1,5 +1,5 @@
 <!-- Effects for my custom github profile renderer, https://api.zelesis.com/github-zen-ham -->
-<span style="opacity:0;font-size:0;height:0;width:0;line-height:0">hidden text</span>
+<div hidden="hidden" aria-hidden="true">secret message</div>
 
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge A\ Bit\ About\ Me}$$</h2>
 
