@@ -29,6 +29,10 @@ Sub project
 
 I had alot of fun putting together this really cool interactive [status page](https://api.zelesis.com/status) for every running service my company has, I'm not the best at web design or anything, but making that felt like raking the stones around in a zen garden, it was fun just polishing the hell out of it and making that site exactly how I envisioned it, even if that wasn't a super grand vision.
 
+<div align="center">
+  <img src="https://github.com/zen-ham/zen-ham/blob/main/ffsdsfff.PNG?raw=true" alt="ss" width="48%" />
+</div>
+
 Python package
 ---
 
