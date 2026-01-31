@@ -21,7 +21,7 @@ My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zel
 Here's some live updating graphs to show the userbase of my software at Zelesis:  (All Time | Last Month)
 <div align="center">
   <img src="https://api.zelesis.com/log_analysis.png" alt="Log Analysis" width="48%" />
-  <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="48%" />
+  <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="100%" />
 </div>
 
 Sub project
