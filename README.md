@@ -21,7 +21,7 @@ My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zel
 Here's some live updating graphs to show the userbase of my software at Zelesis:  (All Time | Last Month)
 <div align="center">
   <img src="https://api.zelesis.com/log_analysis.png" alt="Log Analysis" width="48%" />
-  <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="100%" />
+  <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="48%" />
 </div>
 
 Sub project
@@ -30,7 +30,7 @@ Sub project
 I had alot of fun putting together this really cool interactive [status page](https://api.zelesis.com/status) for every running service my company has, I'm not the best at web design or anything, but making that felt like raking the stones around in a zen garden, it was fun just polishing the hell out of it and making that site exactly how I envisioned it, even if that wasn't a super grand vision.
 
 <div align="center">
-  <img src="https://github.com/zen-ham/zen-ham/blob/main/ffsdsfff.PNG?raw=true" alt="ss" width="48%" />
+  <img src="https://github.com/zen-ham/zen-ham/blob/main/ffsdsfff.PNG?raw=true" alt="ss" width="100%" />
 </div>
 
 Python package
