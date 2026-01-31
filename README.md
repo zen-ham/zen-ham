@@ -108,6 +108,8 @@ I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and 
   </a>
 </div>
 
+##
+
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
 <table>
