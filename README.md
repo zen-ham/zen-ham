@@ -92,7 +92,7 @@ I've been actively developing my Python package [![zhmiscellanybadge](https://im
 
 ### ⠀ ⠀
 
-[ ](# "!bigger=2")
+[ ](# "!bigger=5")
 <div align="center" style="margin: 20px 0;">
   <a href="https://github.com/zen-ham#-" style="text-decoration: none;">
     <img 
