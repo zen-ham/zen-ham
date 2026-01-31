@@ -30,6 +30,9 @@ I've been actively developing my Python package [![zhmiscellanybadge](https://im
 
 ##
 
+[ ](# "!underline=#009900")
+[ ](# "!color=#009900")
+[ ](# "!shadow=#00ff00")
 <h3 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge What\ I\ Use}$$</h3>
 <table><tr><td valign="top" width="33%">
 
@@ -176,7 +179,10 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   </tr>
 </table>
 
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Stats}$$</h2>
+[ ](# "!underline=#009900")
+[ ](# "!color=#009900")
+[ ](# "!shadow=#00ff00")
+<h3 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Stats}$$</h3>
 
 <p align="center">
   <img height="170em" src="https://github-readme-stats.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
