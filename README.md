@@ -190,6 +190,9 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">
 </p>
 
+[ ](# "!underline=#009900")
+[ ](# "!color=#009900")
+[ ](# "!shadow=#00ff00")
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Contact}$$</h2>
 
 <p align="center">If you wish to reach out for any reason, add me on discord: @z_h_</p>
