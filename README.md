@@ -8,7 +8,12 @@
 [ ](# "!page-background=#000000")
 [ ](# "!select-colour=#009600")
 
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge A\ Bit\ About\ Me}$$</h2>
+[ ](# "!rainbow-follow")
+
+[ ](# "!underline=#00ff00")
+[ ](# "!color=#00ff00")
+[ ](# "!shadow=#00ff00")
+<h2 align="center">$${\Huge A\ Bit\ About\ Me}$$</h2>
 
 I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and JS, but I use Python and C++ daily, and have many years experience with it. [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
 
