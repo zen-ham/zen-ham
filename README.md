@@ -9,6 +9,8 @@
 [ ](# "!select-colour=#009600")
 [ ](# "!rainbow-follow")
 
+This page is alot more fun on https://api.zelesis.com/github-zen-ham!
+
 [ ](# "!underline=#009900")
 [ ](# "!color=#009900")
 [ ](# "!shadow=#00ff00")
@@ -27,7 +29,7 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
 Sub project
 ---
 
-I had alot of fun putting together this really cool interactive [status page](https://api.zelesis.com/status) for every running service my company has, I'm not the best at web design or anything, but making that felt like raking the stones around in a zen garden, it was fun just polishing the hell out of it and making that site exactly how I envisioned it, even if that wasn't a super grand vision.
+I had alot of fun putting together this really cool interactive [Status page](https://api.zelesis.com/status) for every running service my company has, I'm not the best at web design or anything, but making that felt like raking the stones around in a zen garden, it was fun just polishing the hell out of it and making that site exactly how I envisioned it, even if that wasn't a super grand vision.
 
 <div align="center">
   <img src="https://github.com/zen-ham/zen-ham/blob/main/ffsdsfff.PNG?raw=true" alt="ss" width="100%" />
@@ -37,6 +39,11 @@ Python package
 ---
 
 I've been actively developing my Python package [![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany) [![PyPI Downloads](https://static.pepy.tech/badge/zhmiscellany)](https://github.com/zen-ham/zhmiscellany) [![stars](https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social)](https://github.com/zen-ham/zhmiscellany) for over 2 years. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30, I personally use it in practically 100% of the Python scripts I write.
+
+Gtihub profile page effects
+---
+
+I made a little portal to github that anyone can use, for example, try going to https://api.zelesis.com/github-zen-ham, my profile page is alot more interesting on there :)
 
 <br/>  
 
