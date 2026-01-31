@@ -30,7 +30,7 @@ I've been actively developing my Python package [![zhmiscellanybadge](https://im
 
 ##
 
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge What\ I\ Use}$$</h2>
+<h3 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge What\ I\ Use}$$</h3>
 <table><tr><td valign="top" width="33%">
 
 
