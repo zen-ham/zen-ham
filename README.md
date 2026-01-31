@@ -92,8 +92,8 @@ I've been actively developing my Python package [![zhmiscellanybadge](https://im
 
 ### ⠀ ⠀
 
-<h1 align="center" style="margin: 20px 0;">
-  [ ](# "!bigger=10")
+[ ](# "!bigger=10")
+<div align="center" style="margin: 20px 0;">
   <a href="https://github.com/zen-ham#-" style="text-decoration: none;">
     <img 
       src="https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative" 
@@ -101,7 +101,7 @@ I've been actively developing my Python package [![zhmiscellanybadge](https://im
       style="box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); border-radius: 10px;"
     >
   </a>
-</h1>
+</div>
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
