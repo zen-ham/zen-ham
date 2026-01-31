@@ -109,7 +109,7 @@ I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and 
 </div>
 
 [ ](# "!underline=#009900")
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge  }$$</h2>
+hello
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
