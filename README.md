@@ -13,7 +13,7 @@
 [ ](# "!underline=#00ff00")
 [ ](# "!color=#00ff00")
 [ ](# "!shadow=#00ff00")
-<h2 align="center">$${\Huge A\ Bit\ About\ Me}$$</h2>
+<h3 align="center">$${\Huge A\ Bit\ About\ Me}$$</h3>
 
 I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and JS, but I use Python and C++ daily, and have many years experience with it. [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
 
