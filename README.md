@@ -9,7 +9,7 @@
 [ ](# "!select-colour=#009600")
 [ ](# "!rainbow-follow")
 
-This page is alot more fun on https://api.zelesis.com/github-zen-ham!
+This page is alot more fun on https://api.zelesis.com/github-zen-ham! Try highlighting something!
 
 [ ](# "!underline=#009900")
 [ ](# "!color=#009900")
