@@ -86,6 +86,8 @@ I made a little portal to github that anyone can use, for example, try going to 
 <a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" /></a>  
 <a href="https://www.postgresql.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg" alt="PostgreSQL" height="50" /></a>  
 <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
+<a href="https://cloud.google.com/run" target="_blank"><img style="margin: 10px" src="https://www.gstatic.com/bricks/image/f2e0986a2802c0b6c4be7f1355599d5aadfb21a63b7e9643d96697ff9334a1e1.svg" alt="Google Cloud Run" height="50" /></a>  
+<a href="https://www.cloudflare.com/en-au/developer-platform/products/r2/" target="_blank"><img style="margin: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxhi_hTV0kECvQEPp1KMDS4sx86jyRJIU4ag&s" alt="Cloudflare R2" height="50" /></a>  
 </div>
 
 </td><td valign="top" width="33%">
