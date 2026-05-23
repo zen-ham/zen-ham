@@ -16,7 +16,7 @@ This page is alot more fun on https://api.zelesis.com/github-zen-ham! Try highli
 [ ](# "!shadow=#00ff00")
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Projects}$$</h2>
 
-Company
+Companies
 ---
 
 My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out.\
@@ -27,6 +27,11 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
 <div align="center">
   <img src="https://api.zelesis.com/log_analysis.png" alt="Log Analysis" width="48%" />
   <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="48%" />
+</div>
+
+Another one is [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. You upload a photo and it pinpoints the location in seconds, and it works pretty much anywhere on earth. I also released a Python wrapper for the API, [pygeoaxis](https://github.com/zen-ham/pygeoaxis), so you can hit it programmatically.
+<div align="center">
+  <img src="https://geoaxis.ai/images/Hero/hero-dashboard.webp" alt="GeoAxis dashboard preview" width="100%" />
 </div>
 
 Sub project
