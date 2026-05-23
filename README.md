@@ -29,6 +29,8 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
   <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="48%" />
 </div>
 
+---
+
 Another one is [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. You upload a photo and it pinpoints the location in seconds, and it works pretty much anywhere on earth. I also released a Python wrapper for the API, [pygeoaxis](https://github.com/zen-ham/pygeoaxis), so you can hit it programmatically.
 <div align="center">
   <img src="https://geoaxis.ai/images/Hero/hero-dashboard.webp" alt="GeoAxis dashboard preview" width="100%" />
