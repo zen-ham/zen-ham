@@ -19,7 +19,11 @@ This page is alot more fun on https://api.zelesis.com/github-zen-ham! Try highli
 Companies
 ---
 
-My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out.\
+My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out.
+<div align="center">
+  <img src="https://github.com/zen-ham/zen-ham/blob/main/zelesis_site.png?raw=true" alt="Zelesis site" width="100%" />
+</div>
+
 Here's some live updating graphs to show the userbase of my software at Zelesis:  (All Time | Last Month)
 <div align="center">
   <img src="https://api.zelesis.com/country_stats.png" alt="ss" width="100%" />
