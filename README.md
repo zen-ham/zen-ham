@@ -19,7 +19,7 @@ This page is alot more fun on https://api.zelesis.com/github-zen-ham! Try highli
 Companies
 ---
 
-My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out.
+My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out. I also had alot of fun putting together this really cool interactive [Status page](https://api.zelesis.com/status) for every running service Zelesis has, you can spin the globe around and look at all the graphs and uptime stats.
 <div align="center">
   <img src="https://github.com/zen-ham/zen-ham/blob/main/zelesis_site.png?raw=true" alt="Zelesis site" width="100%" />
 </div>
@@ -41,15 +41,6 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
 I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service (our AI is a model we trained with data we gathered ourselves, not an LLM or slop like that) that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. Upload a photo and it pinpoints the exact location, and it works pretty much anywhere on earth. Random photo of some town in australia and it gets the exact address. I also released a Python wrapper for the API, [pygeoaxis](https://github.com/zen-ham/pygeoaxis), so you can hit it programmatically.
 <div align="center">
   <img src="https://geoaxis.ai/images/Hero/hero-dashboard.webp" alt="GeoAxis dashboard preview" width="100%" />
-</div>
-
-Sub project
----
-
-I had alot of fun putting together this really cool interactive [Status page](https://api.zelesis.com/status) for every running service Zelesis has, I'm not the best at web design or anything, but making that felt like raking the stones around in a zen garden, it was fun just polishing the hell out of it and making that site exactly how I envisioned it, even if that wasn't a super grand vision.
-
-<div align="center">
-  <img src="https://github.com/zen-ham/zen-ham/blob/main/ffsdsfff.PNG?raw=true" alt="ss" width="100%" />
 </div>
 
 Python packages
