@@ -14,9 +14,9 @@ This page is alot more fun on https://api.zelesis.com/github-zen-ham! Try highli
 [ ](# "!underline=#009900")
 [ ](# "!color=#009900")
 [ ](# "!shadow=#00ff00")
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Projects}$$</h2>
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Companies}$$</h2>
 
-Companies
+Zelesis
 ---
 
 My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out. I also had alot of fun putting together this really cool interactive [Status page](https://api.zelesis.com/status) for every running service Zelesis has, you can spin the globe around and look at all the graphs and uptime stats.
@@ -36,12 +36,18 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
   <img src="https://api.zelesis.com/country_stats.png" alt="ss" width="100%" />
 </div>
 
+GeoAxis
 ---
 
 I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service (our AI is a model we trained with data we gathered ourselves, not an LLM or slop like that) that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. Upload a photo and it pinpoints the exact location, and it works pretty much anywhere on earth. Random photo of some town in australia and it gets the exact address. I also released a Python wrapper for the API, [pygeoaxis](https://github.com/zen-ham/pygeoaxis), so you can hit it programmatically.
 <div align="center">
   <img src="https://geoaxis.ai/images/Hero/hero-dashboard.webp" alt="GeoAxis dashboard preview" width="100%" />
 </div>
+
+[ ](# "!underline=#009900")
+[ ](# "!color=#009900")
+[ ](# "!shadow=#00ff00")
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Side\ projects}$$</h2>
 
 Python packages
 ---
@@ -61,71 +67,8 @@ Github profile page effects
 
 I made a little portal to github that anyone can use, for example, try going to https://api.zelesis.com/github-zen-ham, my profile page is alot more interesting on there :)
 
-<br/>  
-
-[ ](# "!underline=#009900")
-[ ](# "!color=#009900")
-[ ](# "!shadow=#00ff00")
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge What\ I\ Use}$$</h2>
-<table><tr><td valign="top" width="33%">
-
-
-
-### Frontend  
-
-<div align="center">  
-<a href="https://www.qt.io/" target="_blank" title="!paint-div=#143454"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
-<a href="https://www.qt.io/" target="_blank"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg" alt="Qt" height="50" /></a>  
-<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
-<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
-</div>
-
-</td><td valign="top" width="33%">
-
-
-
-### Backend  
-<div align="center">  
-<a href="https://www.qt.io/" target="_blank" title="!paint-div=#0b5c2d"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
-<a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" /></a>  
-<a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" /></a>  
-<a href="https://www.java.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" /></a>  
-<a href="https://pytorch.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/pytorch-icon.svg" alt="pytorch" height="50" /></a>  
-<a href="https://opencv.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" height="50" /></a>  
-<a href="https://flask.palletsprojects.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/flask.png" alt="Flask" height="50" /></a>  
-<a href="https://www.linux.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" /></a>  
-<a href="https://www.nginx.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nginx-original.svg" alt="Nginx" height="50" /></a>  
-<a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" /></a>  
-<a href="https://cloud.google.com/run" target="_blank"><img style="margin: 10px" src="https://www.gstatic.com/bricks/image/f2e0986a2802c0b6c4be7f1355599d5aadfb21a63b7e9643d96697ff9334a1e1.svg" alt="Google Cloud Run" height="50" /></a>  
-<a href="https://www.cloudflare.com/en-au/developer-platform/products/r2/" target="_blank"><img style="margin: 10px" src="https://cdn-1.webcatalog.io/catalog/cloudflare-r2/cloudflare-r2-icon.png?v=1714777230986" alt="Cloudflare R2" height="50" /></a>  
-</div>
-
-</td><td valign="top" width="33%">
-
-
-
-### DevOps  
-<div align="center">  
-<a href="https://www.qt.io/" target="_blank" title="!paint-div=#3c1c4a"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
-<a href="https://aws.amazon.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/amazonwebservices-original-wordmark.svg" alt="AWS" height="50" /></a>  
-<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
-<a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" /></a>  
-</div>
-
-</td></tr></table>
-
-[ ](# "!underline=#009900")
-[ ](# "!color=#009900")
-[ ](# "!shadow=#00ff00")
-<h2 align="center">$${\Huge A\ Bit\ About\ Me}$$</h2>
-
-I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and JS, but I use Python and C++ daily, and have many years experience with it. [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/zen-ham/zen-ham/output/github-contribution-grid-snake-dark.svg" style="width:100%;" />
-</p>
-
-### ⠀ ⠀
+Open source week
+---
 
 [ ](# "!bigger=5")
 <div align="center" style="margin: 20px 0;">
@@ -137,9 +80,6 @@ I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and 
     >
   </a>
 </div>
-
-[ ](# "!underline=#009900")
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${ }$$</h2>
 
 Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
 
@@ -209,7 +149,69 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
 [ ](# "!underline=#009900")
 [ ](# "!color=#009900")
 [ ](# "!shadow=#00ff00")
-<h3 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Stats}$$</h3>
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Stats\ /\ Socials}$$</h2>
+
+A bit about me
+---
+
+I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and JS, but I use Python and C++ daily, and have many years experience with it. [![Github](https://img.shields.io/github/followers/zen-ham?label=Follow&style=social)](https://github.com/zen-ham)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zen-ham/zen-ham/output/github-contribution-grid-snake-dark.svg" style="width:100%;" />
+</p>
+
+What I use
+---
+
+<table><tr><td valign="top" width="33%">
+
+
+
+### Frontend  
+
+<div align="center">  
+<a href="https://www.qt.io/" target="_blank" title="!paint-div=#143454"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
+<a href="https://www.qt.io/" target="_blank"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg" alt="Qt" height="50" /></a>  
+<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
+<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
+</div>
+
+</td><td valign="top" width="33%">
+
+
+
+### Backend  
+<div align="center">  
+<a href="https://www.qt.io/" target="_blank" title="!paint-div=#0b5c2d"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
+<a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" /></a>  
+<a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" /></a>  
+<a href="https://www.java.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" /></a>  
+<a href="https://pytorch.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/pytorch-icon.svg" alt="pytorch" height="50" /></a>  
+<a href="https://opencv.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" height="50" /></a>  
+<a href="https://flask.palletsprojects.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/flask.png" alt="Flask" height="50" /></a>  
+<a href="https://www.linux.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" /></a>  
+<a href="https://www.nginx.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nginx-original.svg" alt="Nginx" height="50" /></a>  
+<a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" /></a>  
+<a href="https://cloud.google.com/run" target="_blank"><img style="margin: 10px" src="https://www.gstatic.com/bricks/image/f2e0986a2802c0b6c4be7f1355599d5aadfb21a63b7e9643d96697ff9334a1e1.svg" alt="Google Cloud Run" height="50" /></a>  
+<a href="https://www.cloudflare.com/en-au/developer-platform/products/r2/" target="_blank"><img style="margin: 10px" src="https://cdn-1.webcatalog.io/catalog/cloudflare-r2/cloudflare-r2-icon.png?v=1714777230986" alt="Cloudflare R2" height="50" /></a>  
+</div>
+
+</td><td valign="top" width="33%">
+
+
+
+### DevOps  
+<div align="center">  
+<a href="https://www.qt.io/" target="_blank" title="!paint-div=#3c1c4a"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
+<a href="https://aws.amazon.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/amazonwebservices-original-wordmark.svg" alt="AWS" height="50" /></a>  
+<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
+<a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" /></a>  
+</div>
+
+</td></tr></table>
+
+Stats
+---
 
 <p align="center">
   <img height="170em" src="https://github-s1.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
@@ -221,10 +223,8 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">
 </p>
 
-[ ](# "!underline=#009900")
-[ ](# "!color=#009900")
-[ ](# "!shadow=#00ff00")
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Contact}$$</h2>
+Contact
+---
 
 <p align="center">If you wish to reach out for any reason, add me on discord: @z_h_</p>
 
