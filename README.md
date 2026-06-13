@@ -48,6 +48,8 @@ I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-
   <img src="https://geoaxis.ai/images/Hero/hero-dashboard.webp" alt="GeoAxis dashboard preview" width="100%" />
 </div>
 
+<br/><br/><br/>
+
 [ ](# "!underline=#009900")
 [ ](# "!color=#009900")
 [ ](# "!shadow=#00ff00")
@@ -158,6 +160,8 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
     </td>
   </tr>
 </table>
+
+<br/><br/><br/>
 
 [ ](# "!underline=#009900")
 [ ](# "!color=#009900")
