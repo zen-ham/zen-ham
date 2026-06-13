@@ -16,9 +16,7 @@ This page is alot more fun on https://api.zelesis.com/github-zen-ham! Try highli
 [ ](# "!shadow=#00ff00")
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Companies}$$</h2>
 
-<div align="center">
-  <img src="https://github.com/zen-ham/zen-ham/blob/main/zelesis_logo.png?raw=true" alt="Zelesis" width="40%" />
-</div>
+<img src="https://github.com/zen-ham/zen-ham/blob/main/zelesis_logo.png?raw=true" alt="Zelesis" width="40%" />
 
 ---
 
@@ -39,9 +37,7 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
   <img src="https://api.zelesis.com/country_stats.png" alt="ss" width="100%" />
 </div>
 
-<div align="center">
-  <img src="https://github.com/zen-ham/zen-ham/blob/main/geoaxis_logo.png?raw=true" alt="GeoAxis" width="40%" />
-</div>
+<img src="https://github.com/zen-ham/zen-ham/blob/main/geoaxis_logo.png?raw=true" alt="GeoAxis" width="40%" />
 
 ---
 
