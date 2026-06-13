@@ -37,6 +37,8 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
   <img src="https://api.zelesis.com/country_stats.png" alt="ss" width="100%" />
 </div>
 
+<br/><br/><br/>
+
 <img src="https://github.com/zen-ham/zen-ham/blob/main/geoaxis_logo.png?raw=true" alt="GeoAxis" width="40%" />
 
 ---
