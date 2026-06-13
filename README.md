@@ -45,7 +45,7 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
 
 I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service (our AI is a model we trained with data we gathered ourselves, not an LLM or slop like that) that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. Upload a photo and it pinpoints the exact location, and it works pretty much anywhere on earth. Random photo of some town in australia and it gets the exact address. I also released a Python wrapper for the API, [pygeoaxis](https://github.com/zen-ham/pygeoaxis), so you can hit it programmatically.
 <div align="center">
-  <img src="https://geoaxis.ai/images/Hero/hero-dashboard.webp" alt="GeoAxis dashboard preview" width="100%" />
+  <img src="https://github.com/zen-ham/zen-ham/blob/main/geoaxis_dashboard.png?raw=true" alt="GeoAxis dashboard preview" width="100%" />
 </div>
 
 <br/><br/><br/>
@@ -73,7 +73,7 @@ dead_cut
 ---
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/zen-ham/dead_cut/master/repo_assets/logo.svg" alt="dead_cut" width="80%" />
+  <img src="https://github.com/zen-ham/zen-ham/blob/main/deadcut_logo.png?raw=true" alt="dead_cut" width="80%" />
 </div>
 
 I built [![dc-badge](https://img.shields.io/badge/GitHub-Dead_cut-blue?logo=github)](https://github.com/zen-ham/dead_cut), an automated YouTube vod editor. Hand it a long stream or vod and it gives you back just the entertaining bits, fully hands off. A 1h25 vod cuts to ~11 mins end to end in 2m17s on my gtx 1660 ti. Two layer system, the AI does the macro scale cuts (100+ edits per long vod) and an algorithmic silence pass handles the micro pacing inside what's kept, so the output actually feels like a well edited youtube video and not just a chopped down vod. Runs on a free OpenRouter model, no API costs ever.
