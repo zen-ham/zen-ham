@@ -16,7 +16,10 @@ This page is alot more fun on https://api.zelesis.com/github-zen-ham! Try highli
 [ ](# "!shadow=#00ff00")
 <h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Companies}$$</h2>
 
-Zelesis
+<div align="center">
+  <img src="https://github.com/zen-ham/zen-ham/blob/main/zelesis_logo.png?raw=true" alt="Zelesis" width="40%" />
+</div>
+
 ---
 
 My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out. I also had alot of fun putting together this really cool interactive [Status page](https://api.zelesis.com/status) for every running service Zelesis has, you can spin the globe around and look at all the graphs and uptime stats.
@@ -36,7 +39,10 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
   <img src="https://api.zelesis.com/country_stats.png" alt="ss" width="100%" />
 </div>
 
-GeoAxis
+<div align="center">
+  <img src="https://github.com/zen-ham/zen-ham/blob/main/geoaxis_logo.png?raw=true" alt="GeoAxis" width="40%" />
+</div>
+
 ---
 
 I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service (our AI is a model we trained with data we gathered ourselves, not an LLM or slop like that) that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. Upload a photo and it pinpoints the exact location, and it works pretty much anywhere on earth. Random photo of some town in australia and it gets the exact address. I also released a Python wrapper for the API, [pygeoaxis](https://github.com/zen-ham/pygeoaxis), so you can hit it programmatically.
@@ -62,6 +68,14 @@ Some of my other Python packages I've released along the way:
 - [![gsudo-badge](https://img.shields.io/badge/GitHub-Gsudo-blue?logo=github)](https://github.com/zen-ham/zhmiscellanygsudo) [![gsudo-dl](https://static.pepy.tech/badge/gsudo)](https://pypi.org/project/gsudo/) [![gsudo-stars](https://img.shields.io/github/stars/zen-ham/zhmiscellanygsudo?style=social)](https://github.com/zen-ham/zhmiscellanygsudo), a wrapper around [gsudo](https://github.com/gerardog/gsudo) that lets a Python script re-run itself as admin (or even SYSTEM / TrustedInstaller on Windows) while keeping the same console window. Available on PyPI as both `zhmiscellanygsudo` and the shorter `gsudo`.
 - [![zpaq-badge](https://img.shields.io/badge/GitHub-Zpaq-blue?logo=github)](https://github.com/zen-ham/zpaq) [![zpaq-dl](https://static.pepy.tech/badge/zpaq)](https://pypi.org/project/zpaq/) [![zpaq-stars](https://img.shields.io/github/stars/zen-ham/zpaq?style=social)](https://github.com/zen-ham/zpaq), real in-memory ZPAQ compression bindings for Python. Up to 6× faster than the official `zpaq.exe` CLI thanks to multi-threaded compress + decompress, JIT, libsais, and AVX2; ships prebuilt wheels for Win/Linux/macOS so installing it never needs a C++ toolchain.
 - [![rustcam-badge](https://img.shields.io/badge/GitHub-Rustcam-blue?logo=github)](https://github.com/zen-ham/rustcam) [![rustcam-dl](https://static.pepy.tech/badge/rustcam)](https://pypi.org/project/rustcam/) [![rustcam-stars](https://img.shields.io/github/stars/zen-ham/rustcam?style=social)](https://github.com/zen-ham/rustcam), Rust-backed DXGI Desktop Duplication screen capture for Windows. Same idea as bettercam but the AcquireNextFrame loop runs in native Rust with the GIL released, so it actually rides the compositor refresh instead of stalling at ~140 fps. Ships a single abi3 wheel that covers Python 3.9 through 3.13+. Available on PyPI as both `rustcam` and the shorter `bestcam`.
+
+dead_cut
+---
+
+I built [![dc-badge](https://img.shields.io/badge/GitHub-Dead_cut-blue?logo=github)](https://github.com/zen-ham/dead_cut), an automated YouTube vod editor. Hand it a long stream or vod and it gives you back just the entertaining bits, fully hands off. A 1h25 vod cuts to ~11 mins end to end in 2m17s on my gtx 1660 ti. Two layer system, the AI does the macro scale cuts (100+ edits per long vod) and an algorithmic silence pass handles the micro pacing inside what's kept, so the output actually feels like a well edited youtube video and not just a chopped down vod. Runs on a free OpenRouter model, no API costs ever.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/zen-ham/dead_cut/master/repo_assets/logo.svg" alt="dead_cut" width="80%" />
+</div>
 
 Github profile page effects
 ---
