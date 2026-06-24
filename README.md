@@ -236,7 +236,7 @@ Stats
   <!-- github-only stat removed -->
   <!-- github-only stat removed -->
   <!-- github-only stat removed -->
-  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=000000&labelColor=000000&label=Profile+Views">
+  <!-- profile views badge removed (github-only) -->
   <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">
 </p>
 
