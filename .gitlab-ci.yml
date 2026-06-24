@@ -1,0 +1,39 @@
+# Daily widget regeneration for the profile readme.
+#
+# Fires on:
+#   - pipeline schedule (set up via gitlab API or Settings -> CI/CD -> Schedules)
+#   - manual web trigger (for ad-hoc re-runs)
+# NOT on regular master push (to avoid commit loops since we push back to master)
+#
+# REQUIRED CI/CD VARIABLE: set WIDGETS_TOKEN at:
+#   gitlab.com/zenham/zenham/-/settings/ci_cd  ->  Variables -> Add
+#   key:   WIDGETS_TOKEN
+#   value: a gitlab personal access token (or project access token) with
+#          api + write_repository scopes
+#   flags: Protected (off), Masked (on), Hidden (on)
+
+generate_widgets:
+  image: python:3.12-slim
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $CI_PIPELINE_SOURCE == "web"
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq --no-install-recommends git >/dev/null
+  variables:
+    GITLAB_USERNAME: "zenham"
+  script:
+    - python make_widgets.py
+    - git config user.email "ci@gitlab.com"
+    - git config user.name "GitLab CI Widgets"
+    - git add widgets/
+    - |
+      if git diff --cached --quiet; then
+        echo "no widget changes; skipping commit"
+      else
+        git commit -m "ci: regenerate widgets [skip ci]"
+        git push "https://oauth2:${WIDGETS_TOKEN}@gitlab.com/zenham/zenham.git" HEAD:master
+      fi
+  artifacts:
+    paths:
+      - widgets/
+    expire_in: 7 days
