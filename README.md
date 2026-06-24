@@ -1,28 +1,21 @@
 <!-- Effects for my custom profile renderer (currently github-only; gitlab equivalent TBD) -->
 <!-- Ones that are not in use
-[ ](# "!snow")
 
 -->
-[ ](# "!binary-swirl")
-[ ](# "!force-dark-mode")
-[ ](# "!page-background=#000000")
-[ ](# "!select-colour=#009600")
-[ ](# "!rainbow-follow")
 
 <!-- custom api.zelesis.com profile renderer pointed at github-zen-ham; account hidden, link removed -->
 
-[ ](# "!underline=#009900")
-[ ](# "!color=#009900")
-[ ](# "!shadow=#00ff00")
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Companies}$$</h2>
+<div align="center">
+<h2>Companies</h2>
+</div>
 
-<img src="https://gitlab.com/zenham/zenham/-/raw/master/zelesis_logo.png" alt="Zelesis" width="40%" />
+<img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/zelesis_logo.png" alt="Zelesis" width="40%" />
 
 ---
 
 My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out. I also had alot of fun putting together this really cool interactive [Status page](https://api.zelesis.com/status) for every running service Zelesis has, you can spin the globe around and look at all the graphs and uptime stats.
 <div align="center">
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/zelesis_site.png" alt="Zelesis site" width="100%" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/zelesis_site.png" alt="Zelesis site" width="100%" />
 </div>
 
 Here's some live updating graphs to show the userbase of my software at Zelesis:  (All Time | Last Month)
@@ -39,21 +32,20 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
 
 <br/><br/><br/>
 
-<img src="https://gitlab.com/zenham/zenham/-/raw/master/geoaxis_logo.png" alt="GeoAxis" width="40%" />
+<img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/geoaxis_logo.png" alt="GeoAxis" width="40%" />
 
 ---
 
 I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service (our AI is a model we trained with data we gathered ourselves, not an LLM or slop like that) that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. Upload a photo and it pinpoints the exact location, and it works pretty much anywhere on earth. Random photo of some town in australia and it gets the exact address. I also released a Python wrapper for the API, [pygeoaxis](https://gitlab.com/zenham/pygeoaxis), so you can hit it programmatically.
 <div align="center">
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/geoaxis_dashboard.png" alt="GeoAxis dashboard preview" width="100%" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/geoaxis_dashboard.png" alt="GeoAxis dashboard preview" width="100%" />
 </div>
 
 <br/><br/><br/>
 
-[ ](# "!underline=#009900")
-[ ](# "!color=#009900")
-[ ](# "!shadow=#00ff00")
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Side\ projects}$$</h2>
+<div align="center">
+<h2>Side projects</h2>
+</div>
 
 Python packages
 ---
@@ -73,7 +65,7 @@ dead_cut
 ---
 
 <div align="center">
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/deadcut_logo.png" alt="dead_cut" width="80%" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/deadcut_logo.png" alt="dead_cut" width="80%" />
 </div>
 
 I built [![dc-badge](https://img.shields.io/badge/GitHub-Dead_cut-blue?logo=github)](https://gitlab.com/zenham/dead_cut) [![dc-stars](https://img.shields.io/gitlab/stars/zenham/dead_cut?style=social)](https://gitlab.com/zenham/dead_cut), an automated YouTube vod editor. Hand it a long stream or vod and it gives you back just the entertaining bits, fully hands off. A 1h25 vod cuts to ~11 mins end to end in 2m17s on my gtx 1660 ti. Two layer system, the AI does the macro scale cuts (100+ edits per long vod) and an algorithmic silence pass handles the micro pacing inside what's kept, so the output actually feels like a well edited youtube video and not just a chopped down vod. Runs on a free OpenRouter model, no API costs ever.
@@ -86,7 +78,6 @@ I made a custom profile renderer for github that did fun visual stuff (https://a
 Open source week
 ---
 
-[ ](# "!bigger=5")
 <div align="center" style="margin: 20px 0;">
   <a href="https://gitlab.com/zenham/zenham#open-source-week" style="text-decoration: none;">
     <img 
@@ -164,10 +155,9 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
 
 <br/><br/><br/>
 
-[ ](# "!underline=#009900")
-[ ](# "!color=#009900")
-[ ](# "!shadow=#00ff00")
-<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Stats\ /\ Socials}$$</h2>
+<div align="center">
+<h2>Stats / Socials</h2>
+</div>
 
 A bit about me
 ---
@@ -236,7 +226,7 @@ Stats
   <!-- github-only stat removed -->
   <!-- github-only stat removed -->
   <!-- github-only stat removed -->
-  <!-- profile views badge removed (github-only) -->
+  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=000000&labelColor=000000&label=Profile+Views" />
   <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">
 </p>
 
