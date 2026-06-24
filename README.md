@@ -1,0 +1,257 @@
+<!-- Effects for my custom profile renderer (currently github-only; gitlab equivalent TBD) -->
+<!-- Ones that are not in use
+[ ](# "!snow")
+
+-->
+[ ](# "!binary-swirl")
+[ ](# "!force-dark-mode")
+[ ](# "!page-background=#000000")
+[ ](# "!select-colour=#009600")
+[ ](# "!rainbow-follow")
+
+<!-- custom api.zelesis.com profile renderer pointed at github-zen-ham; account hidden, link removed -->
+
+[ ](# "!underline=#009900")
+[ ](# "!color=#009900")
+[ ](# "!shadow=#00ff00")
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Companies}$$</h2>
+
+<img src="https://gitlab.com/zenham/zenham/-/raw/master/zelesis_logo.png" alt="Zelesis" width="40%" />
+
+---
+
+My company is [![zbadge](https://img.shields.io/badge/Zelesis-blue)](https://zelesis.com/), check it out. I also had alot of fun putting together this really cool interactive [Status page](https://api.zelesis.com/status) for every running service Zelesis has, you can spin the globe around and look at all the graphs and uptime stats.
+<div align="center">
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/zelesis_site.png" alt="Zelesis site" width="100%" />
+</div>
+
+Here's some live updating graphs to show the userbase of my software at Zelesis:  (All Time | Last Month)
+<div align="center">
+  <img src="https://api.zelesis.com/log_analysis.png" alt="Log Analysis" width="48%" />
+  <img src="https://api.zelesis.com/log_analysis_month.png" alt="Monthly Log Analysis" width="48%" />
+</div>
+<div align="center">
+  <img src="https://api.zelesis.com/session_stats.png" alt="Session Stats" width="100%" />
+</div>
+<div align="center">
+  <img src="https://api.zelesis.com/country_stats.png" alt="ss" width="100%" />
+</div>
+
+<br/><br/><br/>
+
+<img src="https://gitlab.com/zenham/zenham/-/raw/master/geoaxis_logo.png" alt="GeoAxis" width="40%" />
+
+---
+
+I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service (our AI is a model we trained with data we gathered ourselves, not an LLM or slop like that) that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. Upload a photo and it pinpoints the exact location, and it works pretty much anywhere on earth. Random photo of some town in australia and it gets the exact address. I also released a Python wrapper for the API, [pygeoaxis](https://gitlab.com/zenham/pygeoaxis), so you can hit it programmatically.
+<div align="center">
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/geoaxis_dashboard.png" alt="GeoAxis dashboard preview" width="100%" />
+</div>
+
+<br/><br/><br/>
+
+[ ](# "!underline=#009900")
+[ ](# "!color=#009900")
+[ ](# "!shadow=#00ff00")
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Side\ projects}$$</h2>
+
+Python packages
+---
+
+I've been actively developing my Python package [![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://gitlab.com/zenham/zhmiscellany) [![PyPI Downloads](https://static.pepy.tech/badge/zhmiscellany)](https://gitlab.com/zenham/zhmiscellany) [![stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellany?style=social)](https://gitlab.com/zenham/zhmiscellany) for over 2 years. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30, I personally use it in practically 100% of the Python scripts I write.
+
+Some of my other Python packages I've released along the way:
+
+- [![rustcam-badge](https://img.shields.io/badge/GitHub-Rustcam-blue?logo=github)](https://gitlab.com/zenham/rustcam) [![rustcam-dl](https://static.pepy.tech/badge/rustcam)](https://pypi.org/project/rustcam/) [![rustcam-stars](https://img.shields.io/gitlab/stars/zenham/rustcam?style=social)](https://gitlab.com/zenham/rustcam), Rust-backed DXGI Desktop Duplication screen capture for Windows. Same idea as bettercam but the AcquireNextFrame loop runs in native Rust with the GIL released, so it actually rides the compositor refresh instead of stalling at ~140 fps. Ships a single abi3 wheel that covers Python 3.9 through 3.13+. Available on PyPI as both `rustcam` and the shorter `bestcam`.
+- [![zpaq-badge](https://img.shields.io/badge/GitHub-Zpaq-blue?logo=github)](https://gitlab.com/zenham/zpaq) [![zpaq-dl](https://static.pepy.tech/badge/zpaq)](https://pypi.org/project/zpaq/) [![zpaq-stars](https://img.shields.io/gitlab/stars/zenham/zpaq?style=social)](https://gitlab.com/zenham/zpaq), real in-memory ZPAQ compression bindings for Python. Up to 6× faster than the official `zpaq.exe` CLI thanks to multi-threaded compress + decompress, JIT, libsais, and AVX2; ships prebuilt wheels for Win/Linux/macOS so installing it never needs a C++ toolchain.
+- [![pygeo](https://img.shields.io/badge/GitHub-Pygeoaxis-blue?logo=github)](https://gitlab.com/zenham/pygeoaxis) [![pygeo-dl](https://static.pepy.tech/badge/pygeoaxis)](https://pypi.org/project/pygeoaxis/) [![pygeo-stars](https://img.shields.io/gitlab/stars/zenham/pygeoaxis?style=social)](https://gitlab.com/zenham/pygeoaxis), a Python wrapper for the GeoAxis API, to instantly find the exact geographic location for any image.
+- [![gsudo-badge](https://img.shields.io/badge/GitHub-Gsudo-blue?logo=github)](https://gitlab.com/zenham/zhmiscellanygsudo) [![gsudo-dl](https://static.pepy.tech/badge/gsudo)](https://pypi.org/project/gsudo/) [![gsudo-stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellanygsudo?style=social)](https://gitlab.com/zenham/zhmiscellanygsudo), a wrapper around [gsudo](https://github.com/gerardog/gsudo) that lets a Python script re-run itself as admin (or even SYSTEM / TrustedInstaller on Windows) while keeping the same console window. Available on PyPI as both `zhmiscellanygsudo` and the shorter `gsudo`.
+- [![ocr](https://img.shields.io/badge/GitHub-Zhmiscellanyocr-blue?logo=github)](https://gitlab.com/zenham/zhmiscellanyocr) [![ocr-dl](https://static.pepy.tech/badge/zhmiscellanyocr)](https://pypi.org/project/zhmiscellanyocr/) [![ocr-stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellanyocr?style=social)](https://gitlab.com/zenham/zhmiscellanyocr), OCR (image text recognition) utilities I split out of the main package so projects that just want OCR don't have to pull in everything.
+- [![lite](https://img.shields.io/badge/GitHub-Zhmiscellanylite-blue?logo=github)](https://gitlab.com/zenham/zhmiscellanylite) [![lite-dl](https://static.pepy.tech/badge/zhmiscellanylite)](https://pypi.org/project/zhmiscellanylite/) [![lite-stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellanylite?style=social)](https://gitlab.com/zenham/zhmiscellanylite), a smaller, server-focused version of zhmiscellany. Same kind of utilities but without the heavy deps, great for thin VMs and Docker images.
+
+dead_cut
+---
+
+<div align="center">
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/deadcut_logo.png" alt="dead_cut" width="80%" />
+</div>
+
+I built [![dc-badge](https://img.shields.io/badge/GitHub-Dead_cut-blue?logo=github)](https://gitlab.com/zenham/dead_cut) [![dc-stars](https://img.shields.io/gitlab/stars/zenham/dead_cut?style=social)](https://gitlab.com/zenham/dead_cut), an automated YouTube vod editor. Hand it a long stream or vod and it gives you back just the entertaining bits, fully hands off. A 1h25 vod cuts to ~11 mins end to end in 2m17s on my gtx 1660 ti. Two layer system, the AI does the macro scale cuts (100+ edits per long vod) and an algorithmic silence pass handles the micro pacing inside what's kept, so the output actually feels like a well edited youtube video and not just a chopped down vod. Runs on a free OpenRouter model, no API costs ever.
+
+Github profile page effects
+---
+
+I made a little portal to github that anyone can use, for example, try going to https://api.zelesis.com/github-zen-ham, my profile page is alot more interesting on there :)
+
+Open source week
+---
+
+[ ](# "!bigger=5")
+<div align="center" style="margin: 20px 0;">
+  <a href="https://github.com/zen-ham#-" style="text-decoration: none;">
+    <img 
+      src="https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative" 
+      alt="Open Source Week"
+      style="box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); border-radius: 10px;"
+    >
+  </a>
+</div>
+
+Me and a friend Apollo have been doing our own version of Deepseek's "Open Source Week", each releasing one repo we've made every day for a week.
+
+<table>
+  <tr>
+    <th align="center">Day</th>
+    <th align="center">My Project</th>
+    <th align="center">Apollo's Project</th>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 1</b></td>
+    <td>
+      <a href="https://gitlab.com/zenham/zhmiscellany"><img src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="Zhmiscellany"></a>
+      <p><small>Updated documentation for my Python package and improved my workflow to maintain it.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/tales-of-zenmania"><img src="https://img.shields.io/badge/GitHub-Tales_of_Zenmania-blue?logo=github" alt="Tales of Zenmania"></a>
+      <p><small>A text adventure game project.</small></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 2</b></td>
+    <td>
+      <a href="https://gitlab.com/zenham/garrysmod_workshop_scripts"><img src="https://img.shields.io/badge/GitHub-GarrysMod_Workshop_Scripts-blue?logo=github" alt="Garry's Mod Workshop Scripts"></a>
+      <p><small>Refined and released my collection of Garry's Mod scripts with improved usability.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/robot-simulation"><img src="https://img.shields.io/badge/GitHub-Robot_Simulation-blue?logo=github" alt="Robot Simulation"></a>
+      <p><small>A robotics simulation project.</small></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 3</b></td>
+    <td>
+      <a href="https://gitlab.com/zenham/tales_of_zenmania_2"><img src="https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github" alt="Tales of Zenmania 2"></a>
+      <p><small>My own version of Tales of Zenmania with new game mechanics and an expansive story.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/DJ-CHIP"><img src="https://img.shields.io/badge/GitHub-DJ_CHIP-blue?logo=github" alt="DJ CHIP"></a>
+      <p><small>An 8-bit sound emulator that converts MIDI files into true 8-bit wave files.</small></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 4</b></td>
+    <td>
+      <a href="https://gitlab.com/zenham/local_llm_agent"><img src="https://img.shields.io/badge/GitHub-Local_LLM_Agent-blue?logo=github" alt="Local LLM Agent"></a>
+      <p><small>A local LLM agent that allows AI models to perform tasks on your PC.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/Zenith"><img src="https://img.shields.io/badge/GitHub-Zenith-blue?logo=github" alt="Zenith"></a>
+      <p><small>An AI interpreter language based on BASIC.</small></p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Day 5</b></td>
+    <td>
+      <a href="https://gitlab.com/zenham/Search-OCR"><img src="https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github" alt="Search OCR"></a>
+      <p><small>An image OCR and search engine tool for finding text within images on your PC.</small></p>
+    </td>
+    <td>
+      <a href="https://github.com/Ubuntufanboy/Helios"><img src="https://img.shields.io/badge/GitHub-Helios-blue?logo=github" alt="Helios"></a>
+      <p><small>An 8-bit console with custom ISA, audio engine, visual engine, and assembler.</small></p>
+    </td>
+  </tr>
+</table>
+
+<br/><br/><br/>
+
+[ ](# "!underline=#009900")
+[ ](# "!color=#009900")
+[ ](# "!shadow=#00ff00")
+<h2 align="center" style="color: #00ff00; text-shadow: 0 0 10px #00ff00;">$${\Huge Stats\ /\ Socials}$$</h2>
+
+A bit about me
+---
+
+I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and JS, but I use Python and C++ daily, and have many years experience with it. 
+
+<!-- snake graph removed: was github-actions generated, gitlab equivalent TBD -->
+
+What I use
+---
+
+<table><tr><td valign="top" width="33%">
+
+
+
+### Frontend  
+
+<div align="center">  
+<a href="https://www.qt.io/" target="_blank" title="!paint-div=#143454"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
+<a href="https://www.qt.io/" target="_blank"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg" alt="Qt" height="50" /></a>  
+<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
+<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
+</div>
+
+</td><td valign="top" width="33%">
+
+
+
+### Backend  
+<div align="center">  
+<a href="https://www.qt.io/" target="_blank" title="!paint-div=#0b5c2d"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
+<a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" /></a>  
+<a href="https://www.cplusplus.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg" alt="C++" height="50" /></a>  
+<a href="https://www.java.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg" alt="Java" height="50" /></a>  
+<a href="https://pytorch.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/pytorch-icon.svg" alt="pytorch" height="50" /></a>  
+<a href="https://opencv.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/opencv-icon.svg" alt="OpenCV" height="50" /></a>  
+<a href="https://flask.palletsprojects.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/flask.png" alt="Flask" height="50" /></a>  
+<a href="https://www.linux.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/linux-original.svg" alt="Linux" height="50" /></a>  
+<a href="https://www.nginx.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nginx-original.svg" alt="Nginx" height="50" /></a>  
+<a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" /></a>  
+<a href="https://cloud.google.com/run" target="_blank"><img style="margin: 10px" src="https://www.gstatic.com/bricks/image/f2e0986a2802c0b6c4be7f1355599d5aadfb21a63b7e9643d96697ff9334a1e1.svg" alt="Google Cloud Run" height="50" /></a>  
+<a href="https://www.cloudflare.com/en-au/developer-platform/products/r2/" target="_blank"><img style="margin: 10px" src="https://cdn-1.webcatalog.io/catalog/cloudflare-r2/cloudflare-r2-icon.png?v=1714777230986" alt="Cloudflare R2" height="50" /></a>  
+</div>
+
+</td><td valign="top" width="33%">
+
+
+
+### DevOps  
+<div align="center">  
+<a href="https://www.qt.io/" target="_blank" title="!paint-div=#3c1c4a"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="Qt" height="50" /></a>  
+<a href="https://aws.amazon.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/amazonwebservices-original-wordmark.svg" alt="AWS" height="50" /></a>  
+<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
+<a href="https://www.gnu.org/software/bash/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/gnu_bash-icon.svg" alt="Bash" height="50" /></a>  
+</div>
+
+</td></tr></table>
+
+Stats
+---
+
+<p align="center">
+  <img height="170em" src="https://github-s1.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
+  <img height="170em" src="https://github-s1.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=chartreuse-dark" />
+  <img height="170em" src="https://github-s2.vercel.app/?username=zen-ham&theme=matrix&row=2&column=2" />
+  <img height="170em" src="https://streak-stats.demolab.com?user=zen-ham&theme=chartreuse-dark" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=zen-ham&theme=chartreuse-dark" style="width:100%;" />
+  <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=000000&labelColor=000000&label=Profile+Views">
+  <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">
+</p>
+
+Contact
+---
+
+<p align="center">If you wish to reach out for any reason, add me on discord: @z_h_</p>
+
+<div align="center">
+<a href="https://github.com/zen-ham" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+<a href="https://discord.gg/MfgBB9cPBa" target="_blank">
+<img src="https://img.shields.io/badge/discord-%2371D1FF.svg?&style=for-the-badge&logo=discord&logoColor=white" alt="discord" style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.youtube.com/@zh9664" target="_blank">
+<img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
+</a>  
+</div>
