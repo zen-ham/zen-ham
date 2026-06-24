@@ -81,14 +81,14 @@ I built [![dc-badge](https://img.shields.io/badge/GitHub-Dead_cut-blue?logo=gith
 Github profile page effects
 ---
 
-I made a little portal to github that anyone can use, for example, try going to https://api.zelesis.com/github-zen-ham, my profile page is alot more interesting on there :)
+I made a custom profile renderer for github that did fun visual stuff (https://api.zelesis.com/github-zen-ham). With my github account now hidden the renderer is offline; a gitlab equivalent is on the todo list.
 
 Open source week
 ---
 
 [ ](# "!bigger=5")
 <div align="center" style="margin: 20px 0;">
-  <a href="https://github.com/zen-ham#-" style="text-decoration: none;">
+  <a href="https://gitlab.com/zenham/zenham#open-source-week" style="text-decoration: none;">
     <img 
       src="https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative" 
       alt="Open Source Week"
@@ -230,11 +230,12 @@ Stats
 ---
 
 <p align="center">
-  <img height="170em" src="https://github-s1.vercel.app/api?username=zen-ham&theme=chartreuse-dark&show_icons=true" />
-  <img height="170em" src="https://github-s1.vercel.app/api/top-langs/?username=zen-ham&layout=compact&theme=chartreuse-dark" />
-  <img height="170em" src="https://github-s2.vercel.app/?username=zen-ham&theme=matrix&row=2&column=2" />
-  <img height="170em" src="https://streak-stats.demolab.com?user=zen-ham&theme=chartreuse-dark" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=zen-ham&theme=chartreuse-dark" style="width:100%;" />
+  <!-- github-only stat removed -->
+  
+  <!-- github-only stat removed -->
+  <!-- github-only stat removed -->
+  <!-- github-only stat removed -->
+  <!-- github-only stat removed -->
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=000000&labelColor=000000&label=Profile+Views">
   <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">
 </p>
@@ -245,8 +246,8 @@ Contact
 <p align="center">If you wish to reach out for any reason, add me on discord: @z_h_</p>
 
 <div align="center">
-<a href="https://github.com/zen-ham" target="_blank">
-<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+<a href="https://gitlab.com/zenham" target="_blank">
+<img src=https://img.shields.io/badge/gitlab-%23FC6D26.svg?&style=for-the-badge&logo=gitlab&logoColor=white alt=gitlab style="margin-bottom: 5px;" />
 </a>
 <a href="https://discord.gg/MfgBB9cPBa" target="_blank">
 <img src="https://img.shields.io/badge/discord-%2371D1FF.svg?&style=for-the-badge&logo=discord&logoColor=white" alt="discord" style="margin-bottom: 5px;" />
