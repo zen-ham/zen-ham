@@ -164,7 +164,7 @@ A bit about me
 
 I'm a developer. In order of skill, I'd say I know Python, C++, Java, Rust, and JS, but I use Python and C++ daily, and have many years experience with it. 
 
-<!-- snake graph removed: was github-actions generated, gitlab equivalent TBD -->
+
 
 What I use
 ---
