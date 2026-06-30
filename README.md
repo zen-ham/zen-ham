@@ -184,15 +184,15 @@ What I use
 ---
 
 <table><tr><td valign="top" width="33%">
-### Frontend
+<h3 align="center">Frontend</h3>
 <div align="center">
 <a href="https://www.qt.io/" target="_blank" title="!paint-div=#143454"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="" height="50" /></a>
-<a href="https://www.qt.io/" target="_blank"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg" alt="Qt" height="50" /></a>
+<a href="https://www.qt.io/" target="_blank"><img style="margin: 10px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" alt="Qt" height="50" /></a>
 <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>
 <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>
 </div>
 </td><td valign="top" width="33%">
-### Backend
+<h3 align="center">Backend</h3>
 <div align="center">
 <a href="https://www.qt.io/" target="_blank" title="!paint-div=#0b5c2d"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="" height="50" /></a>
 <a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" /></a>
@@ -208,7 +208,7 @@ What I use
 <a href="https://www.cloudflare.com/en-au/developer-platform/products/r2/" target="_blank"><img style="margin: 10px" src="https://cdn-1.webcatalog.io/catalog/cloudflare-r2/cloudflare-r2-icon.png?v=1714777230986" alt="Cloudflare R2" height="50" /></a>
 </div>
 </td><td valign="top" width="33%">
-### DevOps
+<h3 align="center">DevOps</h3>
 <div align="center">
 <a href="https://www.qt.io/" target="_blank" title="!paint-div=#3c1c4a"><img style="margin: 10px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" alt="" height="50" /></a>
 <a href="https://aws.amazon.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/amazonwebservices-original-wordmark.svg" alt="AWS" height="50" /></a>
