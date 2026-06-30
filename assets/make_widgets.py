@@ -258,12 +258,12 @@ def render_stats():
     w, h = 380, 215
     out = [svg_open(w, h), card(w, h, f'{USER} - gitlab stats', title_centered=False)]
     rows = [
-        ('STAR', 'Total Stars', total_stars),
-        ('GIT',  'Total Commits', total_commits),
-        ('MR',   'Total MRs', total_mrs),
-        ('ISS',  'Total Issues', total_issues),
-        ('REPO', 'Repos', len(projects)),
-        ('CON',  'Contributed to', len(contributed_projects)),
+        ('star',   'Total Stars',     total_stars,                T['text_dim']),
+        ('commit', 'Total Commits',   total_commits,              T['text_dim']),
+        ('mr',     'Total MRs',       total_mrs,                  T['text_dim']),
+        ('iss',    'Total Issues',    total_issues,               T['text_dim']),
+        ('repo',   'Repos',           len(projects),              T['text_dim']),
+        ('con',    'Contributed to',  len(contributed_projects),  T['text_dim']),
     ]
     score = (math.log1p(total_stars) * 3 +
              math.log1p(total_commits) * 2 +
@@ -272,18 +272,22 @@ def render_stats():
              math.log1p(len(projects)) * 2)
     grades = [(50, 'A++'), (35, 'A+'), (25, 'A'), (15, 'B+'), (8, 'B'), (3, 'C'), (0, 'D')]
     grade = next(g for thr, g in grades if score >= thr)
-    cx, cy, rr = w - 65, 130, 38
+    cx, cy, rr = w - 55, 130, 36
     pct = min(score / 50.0, 1.0)
     circ = 2 * math.pi * rr
-    out.append(f'<circle cx="{cx}" cy="{cy}" r="{rr}" fill="none" stroke="{T["border"]}" stroke-width="6"/>')
-    out.append(f'<circle cx="{cx}" cy="{cy}" r="{rr}" fill="none" stroke="{T["accent"]}" stroke-width="6" stroke-dasharray="{pct*circ:.1f},{circ-pct*circ:.1f}" transform="rotate(-90 {cx} {cy})" stroke-linecap="round"/>')
-    out.append(f'<text x="{cx}" y="{cy+8}" fill="{T["accent"]}" font-size="22" font-weight="700" text-anchor="middle">{grade}</text>')
-    y = 65
-    label_x = 20
-    val_x = w - 150
-    for icon, label, val in rows:
-        out.append(f'<text x="{label_x}" y="{y}" fill="{T["text_dim"]}" font-size="12" font-weight="600">{icon}</text>')
-        out.append(f'<text x="{label_x+40}" y="{y}" fill="{T["text"]}" font-size="12">{label}</text>')
+    out.append(f'<circle cx="{cx}" cy="{cy}" r="{rr}" fill="none" stroke="{T["border"]}" stroke-width="5" stroke-opacity="0.3"/>')
+    out.append(f'<circle cx="{cx}" cy="{cy}" r="{rr}" fill="none" stroke="{T["accent"]}" stroke-width="5" stroke-dasharray="{pct*circ:.1f},{circ-pct*circ:.1f}" transform="rotate(-90 {cx} {cy})" stroke-linecap="round"/>')
+    out.append(f'<text x="{cx}" y="{cy+8}" fill="{T["accent"]}" font-size="20" font-weight="700" text-anchor="middle">{grade}</text>')
+    y = 62
+    icon_x = 28
+    label_x = 50
+    val_x = w - 105
+    for icon_key, label, val, icon_color in rows:
+        # render SVG icon centered on (icon_x, y-4); 16x16 viewBox scaled to ~14px
+        path = ICONS[icon_key]
+        fill = icon_color if icon_key == 'star' else 'none'
+        out.append(f'<g transform="translate({icon_x},{y-4}) scale(0.75)"><path d="{path}" fill="{fill}" stroke="{icon_color}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></g>')
+        out.append(f'<text x="{label_x}" y="{y}" fill="{T["text"]}" font-size="12">{label}</text>')
         out.append(f'<text x="{val_x}" y="{y}" fill="{T["text"]}" font-size="12" font-weight="700" text-anchor="end">{val:,}</text>')
         y += 25
     out.append('</svg>')
@@ -294,12 +298,18 @@ def render_stats():
 ICONS = {
     # 5-point star
     'star': 'M 0 -12 L 3.5 -3.7 L 12.3 -3.7 L 5.4 1.4 L 8 9.7 L 0 4.6 L -8 9.7 L -5.4 1.4 L -12.3 -3.7 L -3.5 -3.7 Z',
-    # Fork: a Y shape with bullets
+    # Fork: Y shape with bullets at each tip
     'fork': 'M -7 -8 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M 7 -8 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M 0 8 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M -7 -5 L -7 0 Q -7 3 -4 3 L 4 3 Q 7 3 7 0 L 7 -5 M 0 3 L 0 5',
     # Repo / folder
     'repo': 'M -11 -7 L -2 -7 L 0 -4 L 11 -4 L 11 9 L -11 9 Z',
     # Commits: circle with horizontal line through it
     'commit': 'M -12 0 L -5 0 M 5 0 L 12 0 M 0 0 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0',
+    # Merge request: two parallel branches merging into one (left+right arrows joining)
+    'mr': 'M -8 -9 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M 8 0 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M -8 -6 L -8 6 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M -8 -3 Q -8 0 -5 0 L 5 0',
+    # Issue: circle with exclamation dot
+    'iss': 'M 0 0 m -10 0 a 10 10 0 1 0 20 0 a 10 10 0 1 0 -20 0 M 0 -5 L 0 1 M 0 4 L 0 5',
+    # Contributed to: heart shape
+    'con': 'M 0 8 C -2 5 -10 1 -10 -4 C -10 -7 -7 -10 -4 -10 C -2 -10 -1 -9 0 -7 C 1 -9 2 -10 4 -10 C 7 -10 10 -7 10 -4 C 10 1 2 5 0 8 Z',
 }
 
 def render_trophies():
