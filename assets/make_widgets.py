@@ -55,6 +55,38 @@ LANG_COLORS = {
 }
 def lang_color(name): return LANG_COLORS.get(name, '#888888')
 
+# Fallback palette for perceptually-distinct assignment when natural colors collide
+_DISTINCT_PALETTE = ['#e91e63','#9c27b0','#673ab7','#3f51b5','#2196f3','#00bcd4','#009688','#4caf50','#cddc39','#ff9800','#795548','#607d8b']
+
+def _hex_to_rgb(h):
+    h = h.lstrip('#')
+    return int(h[0:2],16), int(h[2:4],16), int(h[4:6],16)
+
+def perceptual_dist(c1, c2):
+    """Quick perception-weighted RGB distance (good enough for collision detection)."""
+    r1,g1,b1 = _hex_to_rgb(c1); r2,g2,b2 = _hex_to_rgb(c2)
+    return ((r1-r2)**2 * 0.3 + (g1-g2)**2 * 0.59 + (b1-b2)**2 * 0.11) ** 0.5
+
+def assign_distinct_colors(langs, min_dist=35):
+    """Given an ordered list of languages, return {lang: color} where each color is
+    perceptually distinct from all previously-assigned colors. Falls back to
+    DISTINCT_PALETTE when the natural language color collides."""
+    assigned = {}
+    used = []
+    for lang in langs:
+        nat = lang_color(lang)
+        if all(perceptual_dist(nat, u) > min_dist for u in used):
+            chosen = nat
+        else:
+            chosen = nat  # default to natural if no fallback fits
+            for fb in _DISTINCT_PALETTE:
+                if all(perceptual_dist(fb, u) > min_dist for u in used):
+                    chosen = fb
+                    break
+        assigned[lang] = chosen
+        used.append(chosen)
+    return assigned
+
 import time as _time
 def _fetch(url, headers, attempts=4):
     last = None
@@ -223,7 +255,7 @@ def grid_divider(w, h):
 
 # ---- stats.svg (rectangular; header LEFT-aligned per user spec) ----
 def render_stats():
-    w, h = 460, 230
+    w, h = 380, 215
     out = [svg_open(w, h), card(w, h, f'{USER} - gitlab stats', title_centered=False)]
     rows = [
         ('STAR', 'Total Stars', total_stars),
@@ -271,80 +303,82 @@ ICONS = {
 }
 
 def render_trophies():
-    w = h = 360
+    w = h = 290
+    title_h = 32  # reserve top band for title so cells don't collide with it
+    body_top = title_h
+    body_h = h - title_h
     out = [svg_open(w, h)]
     out.append(f'<rect x="1.5" y="1.5" rx="8" ry="8" width="{w-3}" height="{h-3}" fill="{T["card"]}" stroke="{T["border"]}" stroke-width="2"/>')
-    out.append(f'<text x="{w/2}" y="24" fill="{T["accent"]}" font-size="14" font-weight="700" text-anchor="middle">achievements</text>')
-    out.append(grid_divider(w, h))
+    out.append(f'<text x="{w/2}" y="22" fill="{T["accent"]}" font-size="14" font-weight="700" text-anchor="middle">achievements</text>')
+    # divider: vertical starts below title; horizontal at body midpoint
+    out.append(f'<line x1="{w/2}" y1="{body_top+8}" x2="{w/2}" y2="{h-12}" stroke="{T["divider"]}" stroke-width="1" opacity="0.6"/>')
+    out.append(f'<line x1="12" y1="{body_top+body_h/2}" x2="{w-12}" y2="{body_top+body_h/2}" stroke="{T["divider"]}" stroke-width="1" opacity="0.6"/>')
     items = [
         ('star',   'Stars',   total_stars,    [1, 5, 25, 100]),
         ('fork',   'Forks',   total_forks,    [1, 5, 25, 100]),
         ('repo',   'Repos',   len(projects),  [1, 5, 15, 30]),
         ('commit', 'Commits', total_commits,  [10, 50, 200, 1000]),
     ]
+    r = 26  # smaller circle to fit content in 290 widget
     for i, (icon, label, val, levels) in enumerate(items):
         col, row = i % 2, i // 2
         cx = w/4 + col * w/2
-        cy = h/4 + row * h/2
+        # cell center within BODY area (not whole widget) -> no title collision
+        cy = body_top + body_h/4 + row * body_h/2
         tier = 0
         for L in levels:
             if val >= L: tier += 1
         color = TIER_COLORS[tier]
         tier_label = TIER_LABELS[tier]
-        # Circle
-        out.append(f'<circle cx="{cx}" cy="{cy-22}" r="32" fill="none" stroke="{color}" stroke-width="3"/>')
-        # Icon glyph inside, translated to circle center
+        out.append(f'<circle cx="{cx}" cy="{cy-22}" r="{r}" fill="none" stroke="{color}" stroke-width="2.5"/>')
         path = ICONS[icon]
-        # Star is filled; others use stroke-only for an outline glyph
         fill = color if icon == 'star' else 'none'
         out.append(f'<g transform="translate({cx},{cy-22})"><path d="{path}" fill="{fill}" stroke="{color}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></g>')
-        # Labels below circle
-        out.append(f'<text x="{cx}" y="{cy+22}" fill="{T["text"]}" font-size="14" font-weight="600" text-anchor="middle">{label}</text>')
-        out.append(f'<text x="{cx}" y="{cy+40}" fill="{color}" font-size="12" font-weight="600" text-anchor="middle">{tier_label}</text>')
-        out.append(f'<text x="{cx}" y="{cy+55}" fill="{T["text_dim"]}" font-size="11" text-anchor="middle">{val:,}</text>')
+        out.append(f'<text x="{cx}" y="{cy+18}" fill="{T["text"]}" font-size="13" font-weight="600" text-anchor="middle">{label}</text>')
+        out.append(f'<text x="{cx}" y="{cy+33}" fill="{color}" font-size="11" font-weight="600" text-anchor="middle">{tier_label}</text>')
+        out.append(f'<text x="{cx}" y="{cy+46}" fill="{T["text_dim"]}" font-size="10" text-anchor="middle">{val:,}</text>')
     out.append('</svg>')
     return ''.join(out)
 
 # ---- streak.svg (2x2; ALL 4 in rings; numbers truly centered in rings) ----
 def render_streak():
-    w = h = 360
+    w = h = 290
+    title_h = 32
+    body_top = title_h
+    body_h = h - title_h
     out = [svg_open(w, h)]
     out.append(f'<rect x="1.5" y="1.5" rx="8" ry="8" width="{w-3}" height="{h-3}" fill="{T["card"]}" stroke="{T["border"]}" stroke-width="2"/>')
-    out.append(f'<text x="{w/2}" y="24" fill="{T["accent"]}" font-size="14" font-weight="700" text-anchor="middle">commit streak</text>')
-    out.append(grid_divider(w, h))
+    out.append(f'<text x="{w/2}" y="22" fill="{T["accent"]}" font-size="14" font-weight="700" text-anchor="middle">commit streak</text>')
+    out.append(f'<line x1="{w/2}" y1="{body_top+8}" x2="{w/2}" y2="{h-12}" stroke="{T["divider"]}" stroke-width="1" opacity="0.6"/>')
+    out.append(f'<line x1="12" y1="{body_top+body_h/2}" x2="{w-12}" y2="{body_top+body_h/2}" stroke="{T["divider"]}" stroke-width="1" opacity="0.6"/>')
     cells = [
         ('Total\nContributions', f'{total_contributions:,}', T['accent_alt']),
         ('Current Streak',       f'{cur_streak}',            T['accent']),
         ('Longest Streak',       f'{longest_streak}',        T['warn']),
         ('Active Days',          f'{active_days:,}',         T['accent_alt']),
     ]
+    ring_r = 28
     for i, (label, val, color) in enumerate(cells):
         col, row = i % 2, i // 2
         cx = w/4 + col * w/2
-        cy = h/4 + row * h/2
-        # Ring centered at (cx, ring_cy). All 4 in rings for consistency.
-        ring_cy = cy - 18
-        ring_r = 34
-        # Auto-scale font down for long numbers so they fit inside the ring
-        # Available diameter ~= 2*ring_r*0.78 = 53. Char widths ~font*0.6.
+        cy = body_top + body_h/4 + row * body_h/2
+        ring_cy = cy - 14
         digits = len(val)
         max_fit = (2 * ring_r * 0.78) / max(digits * 0.6, 0.6)
-        font_size = int(min(28, max_fit))
+        font_size = int(min(24, max_fit))
         out.append(f'<circle cx="{cx}" cy="{ring_cy}" r="{ring_r}" fill="none" stroke="{color}" stroke-width="2.5"/>')
-        # Centered text: use dominant-baseline=central + text-anchor=middle for true center
         out.append(f'<text x="{cx}" y="{ring_cy}" fill="{color}" font-size="{font_size}" font-weight="700" text-anchor="middle" dominant-baseline="central">{val}</text>')
-        # Label below the ring (ring bottom = ring_cy + ring_r = cy-18+34 = cy+16; label at cy+34 leaves 18px gap)
         lines = label.split('\n')
-        ly = cy + 34
+        ly = cy + 25
         for ln in lines:
-            out.append(f'<text x="{cx}" y="{ly}" fill="{T["text_dim"]}" font-size="12" text-anchor="middle">{ln}</text>')
-            ly += 15
+            out.append(f'<text x="{cx}" y="{ly}" fill="{T["text_dim"]}" font-size="11" text-anchor="middle">{ln}</text>')
+            ly += 13
     out.append('</svg>')
     return ''.join(out)
 
 # ---- languages.svg (donut + per-lang list) ----
 def render_languages():
-    w, h = 480, 240
+    w, h = 380, 215
     out = [svg_open(w, h), card(w, h, 'most used languages')]
     if not lang_bytes:
         out.append(f'<text x="{w/2}" y="{h/2}" fill="{T["text_dim"]}" font-size="12" text-anchor="middle">no language data yet</text>')
@@ -444,18 +478,19 @@ def render_bubbles():
                             'msg': (c.get('title','') or '')[:60]})
     print(f'  bubbles: {len(commits)} commits in last {days} days', flush=True)
 
-    # Legend up top: language label + count + total volume; wraps to extra rows when over width
+    # Legend: order by total volume desc, assign perceptually-distinct colors
     lang_count = Counter(c['language'] for c in commits)
     lang_volume = defaultdict(int)
     for c in commits:
         lang_volume[c['language']] += c['lines']
+    ordered_langs = sorted(lang_volume.keys(), key=lambda l: -lang_volume[l])
+    color_map = assign_distinct_colors(ordered_langs)
     legend_y = 64
     legend_row_h = 22
     lx = 30
     margin_right = 30
     extra_rows = 0
-    for lang in sorted(lang_count.keys()):
-        # estimate width of this legend entry
+    for lang in ordered_langs:
         lang_w   = len(lang) * 8
         stats_str = f'{lang_count[lang]}c / {lang_volume[lang]:,}L'
         stats_w  = len(stats_str) * 7
@@ -464,7 +499,7 @@ def render_bubbles():
             lx = 30
             extra_rows += 1
         y = legend_y + extra_rows * legend_row_h
-        col = lang_color(lang)
+        col = color_map[lang]
         out.append(f'<circle cx="{lx+8}" cy="{y}" r="7" fill="{col}" stroke="{_brighten(col,0.5)}" stroke-width="1.5"/>')
         out.append(f'<text x="{lx+22}" y="{y+5}" fill="{T["text"]}" font-size="13" font-weight="600">{lang}</text>')
         out.append(f'<text x="{lx+22+lang_w+6}" y="{y+5}" fill="{T["text_dim"]}" font-size="11">{stats_str}</text>')
@@ -522,7 +557,7 @@ def render_bubbles():
     def xml_escape(text):
         return text.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
     for i, c in enumerate(commits):
-        col = lang_color(c['language'])
+        col = color_map.get(c['language'], lang_color(c['language']))
         stroke = _brighten(col, 0.55)
         title_text = xml_escape(f'{c["msg"]} ({c["lines"]} lines, {c["language"]})')
         out.append(f'<circle cx="{px[i]:.1f}" cy="{py[i]:.1f}" r="{radii[i]:.1f}" fill="{col}" fill-opacity="0.85" stroke="{stroke}" stroke-width="2.5"><title>{title_text}</title></circle>')
