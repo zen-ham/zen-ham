@@ -21,7 +21,8 @@ os.makedirs(OUT, exist_ok=True)
 T = {
     'bg':        '#000000',
     'card':      '#000000',
-    'border':    '#222222',
+    'border':    '#00FF00',   # green outline on every card per user spec
+    'divider':   '#00FF00',   # 2x2 internal cell dividers
     'text':      '#eaeaea',
     'text_dim':  '#888888',
     'accent':    '#00FF00',
@@ -43,13 +44,14 @@ TIER_LABELS = ['Locked', 'Bronze', 'Silver', 'Gold', 'Platinum']
 # Common language colors (github-linguist defaults; extend as needed)
 LANG_COLORS = {
     'JavaScript':'#f1e05a','Python':'#3572A5','TypeScript':'#3178c6','HTML':'#e34c26',
-    'CSS':'#563d7c','SCSS':'#c6538c','C++':'#f34b7d','C':'#555555','Rust':'#dea584',
+    'CSS':'#563d7c','SCSS':'#c6538c','C++':'#f34b7d','C':'#a8a8a8','Rust':'#dea584',
     'Go':'#00ADD8','Java':'#b07219','Shell':'#89e051','Ruby':'#701516','Kotlin':'#A97BFF',
     'Swift':'#F05138','PHP':'#4F5D95','Lua':'#000080','Vue':'#41b883','PowerShell':'#012456',
     'Batchfile':'#C1F12E','Makefile':'#427819','CMake':'#DA3434','Dockerfile':'#384d54',
     'GLSL':'#5686a5','HLSL':'#aace60','Cython':'#fedf5b','C#':'#178600','Jupyter Notebook':'#DA5B0B',
     'Markdown':'#083fa1','TeX':'#3D6117','YAML':'#cb171e','TOML':'#9c4221',
-    'JSON':'#292929','XML':'#0060ac','SVG':'#ff9900','Assembly':'#6E4C13',
+    'JSON':'#e6a23c','XML':'#0060ac','SVG':'#ff9900','Assembly':'#6E4C13',
+    'Other':'#ad7fa8',  # muted purple — visually distinct from any real language color
 }
 def lang_color(name): return LANG_COLORS.get(name, '#888888')
 
@@ -113,32 +115,53 @@ for p in projects:
 total_lang_bytes = sum(lang_bytes.values()) or 1
 print(f'  {len(lang_bytes)} distinct languages, {int(total_lang_bytes):,} bytes total', flush=True)
 
-# Events over ~1 year, chunked to avoid pagination caps
-events = []
-seen = set()
+# Per-commit fetch across owned + contributed-to projects (so commits to collaborator
+# repos like OccultMC/Zelesis_AI_Neo also count). Unlocks pre-account-creation history
+# that the events API can't see.
 today = datetime.now(timezone.utc).date()
-for ci in range(13):
-    after  = (today - timedelta(days=(ci + 1) * 30)).strftime('%Y-%m-%d')
-    before = (today - timedelta(days=ci * 30) + timedelta(days=1)).strftime('%Y-%m-%d')
+
+# Discover all projects user has touched: owned + contributed-to + any picked up via events
+project_ids = {p['id'] for p in projects}
+try:
+    contributed_api = gl_get(f'/users/{USER_ID}/contributed_projects', paginate=True) or []
+    for cp in contributed_api:
+        project_ids.add(cp['id'])
+    print(f'  contributed_projects API added {len(contributed_api)} project entries', flush=True)
+except Exception as _e:
+    print(f'  contributed_projects API failed: {_e}', flush=True)
+
+# Author email filter — user's commits could be authored by either the
+# old zen-ham email or the new zenham email
+AUTHOR_EMAILS = {'again.really.plz@gmail.com', 'zenmastermagnet@gmail.com', 'roeganjoe47@gmail.com'}
+
+all_commits = []
+print(f'  fetching commits across {len(project_ids)} projects (owned + contributed)...', flush=True)
+for pid in project_ids:
     try:
-        chunk = gl_get(f'/users/{USER_ID}/events?after={after}&before={before}', paginate=True)
+        cs = gl_get(f'/projects/{pid}/repository/commits', paginate=True)
     except Exception:
         continue
-    new = [e for e in chunk if e.get('id') and e['id'] not in seen]
-    for e in new: seen.add(e['id'])
-    events += new
-print(f'  {len(events)} events over ~390 days', flush=True)
+    for c in cs:
+        # For collaborator repos, filter to user-authored commits only (so other collaborators' commits don't pollute zenham's stats)
+        if pid not in {p['id'] for p in projects}:
+            ae = (c.get('author_email') or '').lower()
+            if ae and ae not in AUTHOR_EMAILS:
+                continue
+        ts = c.get('created_at') or c.get('committed_date') or ''
+        try:
+            dt = datetime.fromisoformat(ts.replace('Z', '+00:00'))
+        except Exception:
+            continue
+        all_commits.append({'sha': c.get('id',''), 'pid': pid, 'date': dt.date(), 'dt': dt,
+                            'title': (c.get('title','') or '')})
+print(f'  {len(all_commits)} commits total (after author filter on non-owned repos)', flush=True)
 
 daily = Counter()
-total_commits = 0
 contributed_projects = set()
-for e in events:
-    d = e.get('created_at', '')[:10]
-    if d: daily[d] += 1
-    if e.get('action_name') == 'pushed to':
-        total_commits += e.get('push_data', {}).get('commit_count', 1)
-    pid = e.get('project_id')
-    if pid: contributed_projects.add(pid)
+for c in all_commits:
+    daily[c['date'].strftime('%Y-%m-%d')] += 1
+    contributed_projects.add(c['pid'])
+total_commits = len(all_commits)
 total_contributions = sum(daily.values())
 
 # MRs and Issues authored by user
@@ -180,13 +203,21 @@ def svg_open(w, h):
     return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">'
 
 def card(w, h, title=None, title_centered=True):
-    out = [f'<rect x="1" y="1" rx="8" ry="8" width="{w-2}" height="{h-2}" fill="{T["card"]}" stroke="{T["border"]}"/>']
+    # 2px stroke so the green border reads clearly on black bg
+    out = [f'<rect x="1.5" y="1.5" rx="8" ry="8" width="{w-3}" height="{h-3}" fill="{T["card"]}" stroke="{T["border"]}" stroke-width="2"/>']
     if title:
+        # y=38 gives clean clearance from the top border + rounded corner
         if title_centered:
-            out.append(f'<text x="{w/2}" y="30" fill="{T["accent"]}" font-size="16" font-weight="700" text-anchor="middle">{title}</text>')
+            out.append(f'<text x="{w/2}" y="38" fill="{T["accent"]}" font-size="16" font-weight="700" text-anchor="middle">{title}</text>')
         else:
-            out.append(f'<text x="20" y="30" fill="{T["accent"]}" font-size="16" font-weight="700">{title}</text>')
+            out.append(f'<text x="22" y="38" fill="{T["accent"]}" font-size="16" font-weight="700">{title}</text>')
     return ''.join(out)
+
+def grid_divider(w, h):
+    """+ cross divider centered through the geometric middle of the widget."""
+    v = f'<line x1="{w/2}" y1="15" x2="{w/2}" y2="{h-15}" stroke="{T["divider"]}" stroke-width="1" opacity="0.6"/>'
+    hl = f'<line x1="15" y1="{h/2}" x2="{w-15}" y2="{h/2}" stroke="{T["divider"]}" stroke-width="1" opacity="0.6"/>'
+    return v + hl
 
 # ============ RENDERERS ============
 
@@ -226,59 +257,88 @@ def render_stats():
     out.append('</svg>')
     return ''.join(out)
 
-# ---- trophies.svg (square, 2x2 grid, 4 items) ----
+# ---- trophies.svg (square; SVG icon glyphs inside each circle) ----
+# Inline SVG paths sized for a viewBox of -16..16 (32x32). Translated to circle center at runtime.
+ICONS = {
+    # 5-point star
+    'star': 'M 0 -12 L 3.5 -3.7 L 12.3 -3.7 L 5.4 1.4 L 8 9.7 L 0 4.6 L -8 9.7 L -5.4 1.4 L -12.3 -3.7 L -3.5 -3.7 Z',
+    # Fork: a Y shape with bullets
+    'fork': 'M -7 -8 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M 7 -8 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M 0 8 m -3 0 a 3 3 0 1 0 6 0 a 3 3 0 1 0 -6 0 M -7 -5 L -7 0 Q -7 3 -4 3 L 4 3 Q 7 3 7 0 L 7 -5 M 0 3 L 0 5',
+    # Repo / folder
+    'repo': 'M -11 -7 L -2 -7 L 0 -4 L 11 -4 L 11 9 L -11 9 Z',
+    # Commits: circle with horizontal line through it
+    'commit': 'M -12 0 L -5 0 M 5 0 L 12 0 M 0 0 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0',
+}
+
 def render_trophies():
-    w = h = 320
-    out = [svg_open(w, h), card(w, h, 'achievements')]
+    w = h = 360
+    out = [svg_open(w, h)]
+    out.append(f'<rect x="1.5" y="1.5" rx="8" ry="8" width="{w-3}" height="{h-3}" fill="{T["card"]}" stroke="{T["border"]}" stroke-width="2"/>')
+    out.append(f'<text x="{w/2}" y="24" fill="{T["accent"]}" font-size="14" font-weight="700" text-anchor="middle">achievements</text>')
+    out.append(grid_divider(w, h))
     items = [
-        ('STAR', 'Stars',     total_stars,        [1, 5, 25, 100]),
-        ('FORK', 'Forks',     total_forks,        [1, 5, 25, 100]),
-        ('REPO', 'Repos',     len(projects),      [1, 5, 15, 30]),
-        ('COMM', 'Commits',   total_commits,      [10, 50, 200, 1000]),
+        ('star',   'Stars',   total_stars,    [1, 5, 25, 100]),
+        ('fork',   'Forks',   total_forks,    [1, 5, 25, 100]),
+        ('repo',   'Repos',   len(projects),  [1, 5, 15, 30]),
+        ('commit', 'Commits', total_commits,  [10, 50, 200, 1000]),
     ]
-    # 2x2 cell layout starting below the title
-    cell_w, cell_h = w / 2, (h - 50) / 2
     for i, (icon, label, val, levels) in enumerate(items):
         col, row = i % 2, i // 2
-        cx = cell_w * col + cell_w / 2
-        cy = 50 + cell_h * row + cell_h / 2
+        cx = w/4 + col * w/2
+        cy = h/4 + row * h/2
         tier = 0
         for L in levels:
             if val >= L: tier += 1
         color = TIER_COLORS[tier]
         tier_label = TIER_LABELS[tier]
-        out.append(f'<circle cx="{cx}" cy="{cy-12}" r="32" fill="none" stroke="{color}" stroke-width="3"/>')
-        out.append(f'<text x="{cx}" y="{cy-6}" font-size="11" font-weight="700" fill="{color}" text-anchor="middle">{icon}</text>')
-        out.append(f'<text x="{cx}" y="{cy+32}" fill="{T["text"]}" font-size="12" font-weight="600" text-anchor="middle">{label}</text>')
-        out.append(f'<text x="{cx}" y="{cy+48}" fill="{color}" font-size="11" text-anchor="middle">{tier_label}</text>')
-        out.append(f'<text x="{cx}" y="{cy+62}" fill="{T["text_dim"]}" font-size="10" text-anchor="middle">{val:,}</text>')
+        # Circle
+        out.append(f'<circle cx="{cx}" cy="{cy-22}" r="32" fill="none" stroke="{color}" stroke-width="3"/>')
+        # Icon glyph inside, translated to circle center
+        path = ICONS[icon]
+        # Star is filled; others use stroke-only for an outline glyph
+        fill = color if icon == 'star' else 'none'
+        out.append(f'<g transform="translate({cx},{cy-22})"><path d="{path}" fill="{fill}" stroke="{color}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></g>')
+        # Labels below circle
+        out.append(f'<text x="{cx}" y="{cy+22}" fill="{T["text"]}" font-size="14" font-weight="600" text-anchor="middle">{label}</text>')
+        out.append(f'<text x="{cx}" y="{cy+40}" fill="{color}" font-size="12" font-weight="600" text-anchor="middle">{tier_label}</text>')
+        out.append(f'<text x="{cx}" y="{cy+55}" fill="{T["text_dim"]}" font-size="11" text-anchor="middle">{val:,}</text>')
     out.append('</svg>')
     return ''.join(out)
 
-# ---- streak.svg (2x2 square, 4 stats, ring around current) ----
+# ---- streak.svg (2x2; ALL 4 in rings; numbers truly centered in rings) ----
 def render_streak():
-    w = h = 320
-    out = [svg_open(w, h), card(w, h, 'commit streak')]
+    w = h = 360
+    out = [svg_open(w, h)]
+    out.append(f'<rect x="1.5" y="1.5" rx="8" ry="8" width="{w-3}" height="{h-3}" fill="{T["card"]}" stroke="{T["border"]}" stroke-width="2"/>')
+    out.append(f'<text x="{w/2}" y="24" fill="{T["accent"]}" font-size="14" font-weight="700" text-anchor="middle">commit streak</text>')
+    out.append(grid_divider(w, h))
     cells = [
-        ('Total\nContributions', f'{total_contributions:,}', T['accent_alt'], False),
-        ('Current Streak',       f'{cur_streak}',            T['accent'],     True),  # ring
-        ('Longest Streak',       f'{longest_streak}',        T['warn'],       False),
-        ('Active Days',          f'{active_days:,}',         T['accent_alt'], False),
+        ('Total\nContributions', f'{total_contributions:,}', T['accent_alt']),
+        ('Current Streak',       f'{cur_streak}',            T['accent']),
+        ('Longest Streak',       f'{longest_streak}',        T['warn']),
+        ('Active Days',          f'{active_days:,}',         T['accent_alt']),
     ]
-    cell_w, cell_h = w / 2, (h - 50) / 2
-    for i, (label, val, color, ring) in enumerate(cells):
+    for i, (label, val, color) in enumerate(cells):
         col, row = i % 2, i // 2
-        cx = cell_w * col + cell_w / 2
-        cy = 50 + cell_h * row + cell_h / 2
-        if ring:
-            out.append(f'<circle cx="{cx}" cy="{cy-12}" r="34" fill="none" stroke="{color}" stroke-width="2.5"/>')
-        out.append(f'<text x="{cx}" y="{cy-4}" fill="{color}" font-size="26" font-weight="700" text-anchor="middle">{val}</text>')
-        # multi-line label
+        cx = w/4 + col * w/2
+        cy = h/4 + row * h/2
+        # Ring centered at (cx, ring_cy). All 4 in rings for consistency.
+        ring_cy = cy - 18
+        ring_r = 34
+        # Auto-scale font down for long numbers so they fit inside the ring
+        # Available diameter ~= 2*ring_r*0.78 = 53. Char widths ~font*0.6.
+        digits = len(val)
+        max_fit = (2 * ring_r * 0.78) / max(digits * 0.6, 0.6)
+        font_size = int(min(28, max_fit))
+        out.append(f'<circle cx="{cx}" cy="{ring_cy}" r="{ring_r}" fill="none" stroke="{color}" stroke-width="2.5"/>')
+        # Centered text: use dominant-baseline=central + text-anchor=middle for true center
+        out.append(f'<text x="{cx}" y="{ring_cy}" fill="{color}" font-size="{font_size}" font-weight="700" text-anchor="middle" dominant-baseline="central">{val}</text>')
+        # Label below the ring (ring bottom = ring_cy + ring_r = cy-18+34 = cy+16; label at cy+34 leaves 18px gap)
         lines = label.split('\n')
-        ly = cy + 30
+        ly = cy + 34
         for ln in lines:
-            out.append(f'<text x="{cx}" y="{ly}" fill="{T["text_dim"]}" font-size="11" text-anchor="middle">{ln}</text>')
-            ly += 14
+            out.append(f'<text x="{cx}" y="{ly}" fill="{T["text_dim"]}" font-size="12" text-anchor="middle">{ln}</text>')
+            ly += 15
     out.append('</svg>')
     return ''.join(out)
 
@@ -319,40 +379,161 @@ def render_languages():
     out.append('</svg>')
     return ''.join(out)
 
-# ---- bubbles.svg (language code bubbles, log-scale area, centered single-row) ----
+# ---- bubbles.svg (per-commit blobs, size=lines changed, color=primary language) ----
+EXT_TO_LANG = {
+    '.py':'Python','.pyi':'Python','.pyx':'Cython',
+    '.cpp':'C++','.cc':'C++','.cxx':'C++','.hpp':'C++','.hh':'C++','.h':'C',
+    '.c':'C','.ino':'C++',
+    '.js':'JavaScript','.mjs':'JavaScript','.jsx':'JavaScript',
+    '.ts':'TypeScript','.tsx':'TypeScript',
+    '.html':'HTML','.htm':'HTML','.css':'CSS','.scss':'SCSS','.sass':'SCSS',
+    '.rs':'Rust','.go':'Go','.java':'Java','.kt':'Kotlin','.swift':'Swift',
+    '.sh':'Shell','.bash':'Shell','.zsh':'Shell','.ps1':'PowerShell','.bat':'Batchfile',
+    '.cmake':'CMake','.md':'Markdown','.yml':'YAML','.yaml':'YAML','.toml':'TOML',
+    '.json':'JSON','.xml':'XML','.svg':'SVG','.tex':'TeX','.rb':'Ruby','.lua':'Lua',
+    '.glsl':'GLSL','.vert':'GLSL','.frag':'GLSL','.hlsl':'HLSL','.cs':'C#','.php':'PHP',
+    '.vue':'Vue','.ipynb':'Jupyter Notebook','.asm':'Assembly','.s':'Assembly',
+}
+
+def _brighten(hex_color, frac=0.45):
+    """Mix a hex color toward white by fraction (for bubble stroke contrast)."""
+    h = hex_color.lstrip('#')
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    r = int(r + (255 - r) * frac)
+    g = int(g + (255 - g) * frac)
+    b = int(b + (255 - b) * frac)
+    return f'#{r:02x}{g:02x}{b:02x}'
+
 def render_bubbles():
-    w, h = 720, 280
-    out = [svg_open(w, h), card(w, h, 'code distribution by language (log scale bubbles)')]
-    if not lang_bytes:
-        out.append(f'<text x="{w/2}" y="{h/2}" fill="{T["text_dim"]}" font-size="12" text-anchor="middle">no language data yet</text>')
+    w, h = 1080, 520  # scaled up for higher DPI + more bubble room
+    out = [svg_open(w, h)]
+    out.append(f'<rect x="1.5" y="1.5" rx="8" ry="8" width="{w-3}" height="{h-3}" fill="{T["card"]}" stroke="{T["border"]}" stroke-width="2"/>')
+    out.append(f'<text x="{w/2}" y="32" fill="{T["accent"]}" font-size="17" font-weight="700" text-anchor="middle">commits this week | size = lines changed | colour = primary language</text>')
+    today = datetime.now(timezone.utc).date()
+    days = 7
+    week_start = today - timedelta(days=days - 1)
+    since = week_start.strftime('%Y-%m-%d')
+
+    commits = []
+    for pid in contributed_projects:
+        try:
+            cs = gl_get(f'/projects/{pid}/repository/commits?since={since}&with_stats=true', paginate=True)
+        except Exception:
+            continue
+        for c in cs:
+            lines = (c.get('stats') or {}).get('total', 0)
+            if lines <= 0: continue
+            try:
+                diff = gl_get(f'/projects/{pid}/repository/commits/{c["id"]}/diff')
+            except Exception:
+                diff = []
+            tally = Counter()
+            for d in diff or []:
+                path = d.get('new_path') or d.get('old_path') or ''
+                if '.' not in path: continue
+                ext = '.' + path.rsplit('.', 1)[-1].lower()
+                lang = EXT_TO_LANG.get(ext)
+                if lang: tally[lang] += 1
+            primary = tally.most_common(1)[0][0] if tally else 'Other'
+            ts = c.get('created_at', '') or c.get('committed_date', '')
+            try:
+                d_dt = datetime.fromisoformat(ts.replace('Z','+00:00')).date()
+            except Exception:
+                d_dt = today
+            commits.append({'date': d_dt, 'lines': lines, 'language': primary,
+                            'msg': (c.get('title','') or '')[:60]})
+    print(f'  bubbles: {len(commits)} commits in last {days} days', flush=True)
+
+    # Legend up top: language label + count + total volume; wraps to extra rows when over width
+    lang_count = Counter(c['language'] for c in commits)
+    lang_volume = defaultdict(int)
+    for c in commits:
+        lang_volume[c['language']] += c['lines']
+    legend_y = 64
+    legend_row_h = 22
+    lx = 30
+    margin_right = 30
+    extra_rows = 0
+    for lang in sorted(lang_count.keys()):
+        # estimate width of this legend entry
+        lang_w   = len(lang) * 8
+        stats_str = f'{lang_count[lang]}c / {lang_volume[lang]:,}L'
+        stats_w  = len(stats_str) * 7
+        entry_w  = 22 + lang_w + 6 + stats_w + 24
+        if lx + entry_w > w - margin_right:
+            lx = 30
+            extra_rows += 1
+        y = legend_y + extra_rows * legend_row_h
+        col = lang_color(lang)
+        out.append(f'<circle cx="{lx+8}" cy="{y}" r="7" fill="{col}" stroke="{_brighten(col,0.5)}" stroke-width="1.5"/>')
+        out.append(f'<text x="{lx+22}" y="{y+5}" fill="{T["text"]}" font-size="13" font-weight="600">{lang}</text>')
+        out.append(f'<text x="{lx+22+lang_w+6}" y="{y+5}" fill="{T["text_dim"]}" font-size="11">{stats_str}</text>')
+        lx += entry_w
+
+    if not commits:
+        out.append(f'<text x="{w/2}" y="{h/2}" fill="{T["text_dim"]}" font-size="14" text-anchor="middle">no commits this week</text>')
         out.append('</svg>')
         return ''.join(out)
-    items = sorted(lang_bytes.items(), key=lambda x: -x[1])[:12]
-    log_vals = [math.log1p(v) for _, v in items]
-    max_lv = max(log_vals)
-    min_lv = min(log_vals)
-    max_r = 60
-    min_r = 14
+
+    # plot area top adjusts for legend wraps (extra_rows from legend layout above)
+    pad_l, pad_r, pad_b = 40, 40, 45
+    pad_t = 105 + extra_rows * legend_row_h
+    plot_w = w - pad_l - pad_r
+    plot_h = h - pad_t - pad_b
+
+    # Vertical grid lines per date label (darker green, low priority visual)
+    for di in range(days):
+        x = pad_l + (di / (days - 1)) * plot_w
+        out.append(f'<line x1="{x:.1f}" y1="{pad_t}" x2="{x:.1f}" y2="{h - pad_b + 6}" stroke="#003a00" stroke-width="1"/>')
+
+    log_vals = [math.log1p(c['lines']) for c in commits]
+    max_lv, min_lv = max(log_vals), min(log_vals)
+    min_r, max_r = 10, 52
     def radius(lv): return min_r + (lv - min_lv) / (max_lv - min_lv + 1e-9) * (max_r - min_r)
     radii = [radius(lv) for lv in log_vals]
-    # Center horizontally: sum widths + gaps, then offset start so the cluster is centered
-    gap = 14
-    total_w = sum(2*r for r in radii) + gap * (len(radii) - 1)
-    start_x = (w - total_w) / 2
-    cy = h / 2 + 10  # below header
-    x = start_x
-    for (name, val), r in zip(items, radii):
-        cx = x + r
-        c = lang_color(name)
-        out.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r:.1f}" fill="{c}" fill-opacity="0.9" stroke="{c}" stroke-width="1.5"/>')
-        if r >= 22:
-            fs = max(10, min(15, int(r / 3.2)))
-            out.append(f'<text x="{cx:.1f}" y="{cy+fs/3:.1f}" fill="#000" font-size="{fs}" font-weight="700" text-anchor="middle">{name}</text>')
-        else:
-            # for tiny bubbles, label below — but stagger up/down alternating to avoid overlap
-            label_y = cy + r + 14
-            out.append(f'<text x="{cx:.1f}" y="{label_y}" fill="{T["text_dim"]}" font-size="9" text-anchor="middle">{name}</text>')
-        x += 2*r + gap
+
+    import random
+    random.seed(42)
+    px, py = [], []
+    for c in commits:
+        day_offset = max(0, min(days - 1, (c['date'] - week_start).days))
+        x = pad_l + (day_offset / (days - 1)) * plot_w + random.uniform(-15, 15)
+        y = pad_t + random.uniform(20, plot_h - 20)
+        px.append(x); py.append(y)
+
+    for _ in range(120):
+        for i in range(len(commits)):
+            for j in range(i + 1, len(commits)):
+                dx = px[j] - px[i]; dy = py[j] - py[i]
+                dist2 = dx*dx + dy*dy
+                min_d = radii[i] + radii[j] + 3
+                if dist2 < min_d * min_d:
+                    dist = math.sqrt(dist2) + 1e-9
+                    overlap = (min_d - dist) / 2
+                    nx, ny = dx / dist, dy / dist
+                    px[i] -= nx * overlap; py[i] -= ny * overlap
+                    px[j] += nx * overlap; py[j] += ny * overlap
+        for i in range(len(commits)):
+            r = radii[i]
+            px[i] = max(pad_l + r, min(w - pad_r - r, px[i]))
+            py[i] = max(pad_t + r, min(h - pad_b - r, py[i]))
+
+    # Draw bubbles with bright stroke for contrast + line count inside
+    def xml_escape(text):
+        return text.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
+    for i, c in enumerate(commits):
+        col = lang_color(c['language'])
+        stroke = _brighten(col, 0.55)
+        title_text = xml_escape(f'{c["msg"]} ({c["lines"]} lines, {c["language"]})')
+        out.append(f'<circle cx="{px[i]:.1f}" cy="{py[i]:.1f}" r="{radii[i]:.1f}" fill="{col}" fill-opacity="0.85" stroke="{stroke}" stroke-width="2.5"><title>{title_text}</title></circle>')
+        if radii[i] >= 13:
+            fs = max(9, min(18, int(radii[i] / 2.3)))
+            out.append(f'<text x="{px[i]:.1f}" y="{py[i] + fs/3:.1f}" fill="#000" font-size="{fs}" font-weight="700" text-anchor="middle" pointer-events="none">{c["lines"]}</text>')
+
+    for di in range(days):
+        d = week_start + timedelta(days=di)
+        x = pad_l + (di / (days - 1)) * plot_w
+        out.append(f'<text x="{x}" y="{h-18}" fill="{T["text_dim"]}" font-size="12" text-anchor="middle">{d.strftime("%b %d")}</text>')
     out.append('</svg>')
     return ''.join(out)
 
@@ -366,8 +547,8 @@ def render_activity():
     max_v = max((p[1] for p in pts), default=1) or 1
     pl, pr, pt, pb = 50, 20, 50, 35
     pw, ph = w - pl - pr, h - pt - pb
-    out.append(f'<line x1="{pl}" y1="{pt+ph}" x2="{pl+pw}" y2="{pt+ph}" stroke="{T["border"]}"/>')
-    out.append(f'<line x1="{pl}" y1="{pt}" x2="{pl}" y2="{pt+ph}" stroke="{T["border"]}"/>')
+    # bottom x-axis line removed per user request (was confusing to read)
+    out.append(f'<line x1="{pl}" y1="{pt}" x2="{pl}" y2="{pt+ph}" stroke="{T["border"]}" stroke-opacity="0.4"/>')
     coords = [(pl + (i / (days - 1)) * pw, pt + ph - (v / max_v) * ph) for i, (_, v) in enumerate(pts)]
     poly = ' '.join(f'{x:.1f},{y:.1f}' for x, y in coords)
     out.append(f'<polyline points="{poly}" fill="none" stroke="{T["accent"]}" stroke-width="2"/>')
@@ -383,13 +564,15 @@ def render_activity():
     out.append('</svg>')
     return ''.join(out)
 
-# ---- snake.svg ----
+# ---- snake.svg (forced width 720 to match other wide widgets) ----
 def render_snake():
-    cell, gap = 11, 3
+    w = 720
     weeks, days_n = 53, 7
-    pl, pt = 30, 40
-    w = pl + weeks * (cell + gap) + 20
-    h = pt + days_n * (cell + gap) + 30
+    pt = 50
+    cell, gap = 9, 3
+    grid_w = weeks * (cell + gap)
+    pl = (w - grid_w - 20) / 2
+    h = pt + days_n * (cell + gap) + 35
     out = [svg_open(w, h), card(w, h, '53-week contribution grid')]
     today = datetime.now(timezone.utc).date()
     end_sun = today - timedelta(days=(today.weekday() + 1) % 7)

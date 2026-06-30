@@ -223,11 +223,10 @@ Stats
 
 <div align="center">
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/stats.svg" alt="stats" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/languages.svg" alt="languages" />
   <br/>
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/trophies.svg" alt="trophies" />
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/streak.svg" alt="streak" />
-  <br/>
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/languages.svg" alt="languages" />
   <br/>
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/bubbles.svg" alt="bubbles" />
   <br/>
