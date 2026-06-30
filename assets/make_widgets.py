@@ -154,10 +154,13 @@ today = datetime.now(timezone.utc).date()
 
 # Discover all projects user has touched: owned + contributed-to + any picked up via events
 project_ids = {p['id'] for p in projects}
+# Build pid -> project name lookup as we go; populate from both owned + contributed
+repo_name_by_pid = {p['id']: (p.get('name') or p.get('path') or f'project-{p["id"]}') for p in projects}
 try:
     contributed_api = gl_get(f'/users/{USER_ID}/contributed_projects', paginate=True) or []
     for cp in contributed_api:
         project_ids.add(cp['id'])
+        repo_name_by_pid.setdefault(cp['id'], cp.get('name') or cp.get('path') or f'project-{cp["id"]}')
     print(f'  contributed_projects API added {len(contributed_api)} project entries', flush=True)
 except Exception as _e:
     print(f'  contributed_projects API failed: {_e}', flush=True)
@@ -485,8 +488,17 @@ def render_bubbles():
             except Exception:
                 d_dt = today
             commits.append({'date': d_dt, 'lines': lines, 'language': primary,
-                            'msg': (c.get('title','') or '')[:60]})
+                            'msg': (c.get('title','') or '')[:60],
+                            'repo': repo_name_by_pid.get(pid, f'project-{pid}')})
     print(f'  bubbles: {len(commits)} commits in last {days} days', flush=True)
+
+    def truncate_middle(s, max_chars):
+        if len(s) <= max_chars: return s
+        if max_chars < 3: return s[:max_chars]
+        keep = max_chars - 1
+        left = (keep + 1) // 2
+        right = keep - left
+        return s[:left] + '…' + (s[-right:] if right > 0 else '')
 
     # Legend: order by total volume desc, assign perceptually-distinct colors
     lang_count = Counter(c['language'] for c in commits)
@@ -569,11 +581,14 @@ def render_bubbles():
     for i, c in enumerate(commits):
         col = color_map.get(c['language'], lang_color(c['language']))
         stroke = _brighten(col, 0.55)
-        title_text = xml_escape(f'{c["msg"]} ({c["lines"]} lines, {c["language"]})')
+        title_text = xml_escape(f'{c["repo"]}: {c["msg"]} ({c["lines"]} lines, {c["language"]})')
         out.append(f'<circle cx="{px[i]:.1f}" cy="{py[i]:.1f}" r="{radii[i]:.1f}" fill="{col}" fill-opacity="0.85" stroke="{stroke}" stroke-width="2.5"><title>{title_text}</title></circle>')
         if radii[i] >= 13:
-            fs = max(9, min(18, int(radii[i] / 2.3)))
-            out.append(f'<text x="{px[i]:.1f}" y="{py[i] + fs/3:.1f}" fill="#000" font-size="{fs}" font-weight="700" text-anchor="middle" pointer-events="none">{c["lines"]}</text>')
+            fs = max(9, min(14, int(radii[i] / 3)))
+            # max chars that fit across the bubble at this font size
+            max_chars = int((2 * radii[i] * 0.82) / (fs * 0.55))
+            label = xml_escape(truncate_middle(c['repo'], max_chars))
+            out.append(f'<text x="{px[i]:.1f}" y="{py[i] + fs/3:.1f}" fill="#000" font-size="{fs}" font-weight="700" text-anchor="middle" pointer-events="none">{label}</text>')
 
     for di in range(days):
         d = week_start + timedelta(days=di)
