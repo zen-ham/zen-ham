@@ -662,18 +662,18 @@ Stats
 
 
 <p align="center">
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/widgets/stats.svg" alt="stats" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/stats.svg" alt="stats" />
   <br/>
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/widgets/trophies.svg" alt="trophies" />
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/widgets/streak.svg" alt="streak" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/trophies.svg" alt="trophies" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/streak.svg" alt="streak" />
   <br/>
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/widgets/languages.svg" alt="languages" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/languages.svg" alt="languages" />
   <br/>
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/widgets/bubbles.svg" alt="bubbles" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/bubbles.svg" alt="bubbles" />
   <br/>
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/widgets/activity.svg" alt="activity" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/activity.svg" alt="activity" />
   <br/>
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/widgets/snake.svg" alt="contributions" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/snake.svg" alt="contributions" />
   <br/>
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=000000&labelColor=000000&label=Profile+Views" />
   <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">

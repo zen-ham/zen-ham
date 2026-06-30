@@ -22,10 +22,10 @@ generate_widgets:
   variables:
     GITLAB_USERNAME: "zenham"
   script:
-    - python make_widgets.py
+    - OUT_DIR=assets/widgets python assets/make_widgets.py
     - git config user.email "ci@gitlab.com"
     - git config user.name "GitLab CI Widgets"
-    - git add widgets/
+    - git add assets/widgets/
     - |
       if git diff --cached --quiet; then
         echo "no widget changes; skipping commit"
@@ -35,5 +35,5 @@ generate_widgets:
       fi
   artifacts:
     paths:
-      - widgets/
+      - assets/widgets/
     expire_in: 7 days
