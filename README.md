@@ -2,11 +2,6 @@
 
 
 <!-- Ones that are not in use
-
-
-
-
-
 -->
 
 
@@ -245,20 +240,10 @@ Open source week
 
 
     <img 
-
-
       src="https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative" 
-
-
       alt="Open Source Week"
-
-
       style="box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); border-radius: 10px;"
-
-
     >
-
-
   </a>
 
 
@@ -661,7 +646,7 @@ Stats
 
 
 
-<p align="center">
+<div align="center">
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/stats.svg" alt="stats" />
   <br/>
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/trophies.svg" alt="trophies" />
@@ -677,7 +662,7 @@ Stats
   <br/>
   <img width="99" height="20" src="https://komarev.com/ghpvc/?username=zen-ham&color=000000&labelColor=000000&label=Profile+Views" />
   <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">
-</p>
+</div>
 
 
 
