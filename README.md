@@ -222,13 +222,18 @@ Stats
 ---
 
 <div align="center">
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/lang_commits.svg" alt="most committed languages" />
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/repo_commits.svg" alt="most committed repos" />
+  <br/>
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/bubbles.svg" alt="bubbles this week" />
+  <br/>
+  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/bubbles_month.svg" alt="bubbles this month" />
+  <br/>
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/stats.svg" alt="stats" />
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/languages.svg" alt="languages" />
   <br/>
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/trophies.svg" alt="trophies" />
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/streak.svg" alt="streak" />
-  <br/>
-  <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/bubbles.svg" alt="bubbles" />
   <br/>
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/widgets/activity.svg" alt="activity" />
   <br/>
