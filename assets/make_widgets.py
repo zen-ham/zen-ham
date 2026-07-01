@@ -551,11 +551,22 @@ def render_bubbles():
 
     import random
     random.seed(42)
+    # Soft y-bias by repo rarity: common repos start biased toward top, rare
+    # ones toward bottom. Heavy random jitter on top so the physics + collision
+    # still make it feel organic. Common repos will overflow their band downward
+    # due to sheer volume, but small clusters of rare repos will naturally settle
+    # near the bottom instead of being scattered everywhere.
+    repo_counts = Counter(c['repo'] for c in commits)
+    repos_sorted = sorted(repo_counts.keys(), key=lambda r: -repo_counts[r])  # most-common first
+    n_repos = len(repos_sorted)
+    repo_rank_frac = {r: (i / max(n_repos - 1, 1)) for i, r in enumerate(repos_sorted)}  # 0=common (top), 1=rare (bottom)
     px, py = [], []
     for c in commits:
         day_offset = max(0, min(days - 1, (c['date'] - week_start).days))
         x = pad_l + (day_offset / (days - 1)) * plot_w + random.uniform(-15, 15)
-        y = pad_t + random.uniform(20, plot_h - 20)
+        # target y = rarity-based center of band + jitter (~20% of plot height either way)
+        target_y = pad_t + repo_rank_frac[c['repo']] * plot_h
+        y = target_y + random.uniform(-plot_h * 0.18, plot_h * 0.18)
         px.append(x); py.append(y)
 
     for _ in range(120):
