@@ -22,7 +22,7 @@ generate_widgets:
   variables:
     GITLAB_USERNAME: "zenham"
   script:
-    - OUT_DIR=assets/widgets python assets/make_widgets.py
+    - GITLAB_TOKEN="$WIDGETS_TOKEN" OUT_DIR=assets/widgets python assets/make_widgets.py
     - git config user.email "ci@gitlab.com"
     - git config user.name "GitLab CI Widgets"
     - git add assets/widgets/
