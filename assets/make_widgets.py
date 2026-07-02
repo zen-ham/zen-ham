@@ -191,8 +191,14 @@ user = gl_get(f'/users?username={USER}')[0]
 USER_ID = user['id']
 print(f'  user_id={USER_ID}', flush=True)
 
-projects = gl_get(f'/users/{USER_ID}/projects?statistics=true', paginate=True)
-print(f'  {len(projects)} projects', flush=True)
+# Use ?membership=true — returns owned AND collaborator repos in one call. Works with
+# read_repository scope alone (contributed_projects endpoint needs read_user which the CI
+# token doesn't have).
+all_member = gl_get('/projects?membership=true&statistics=true', paginate=True)
+_user_ns = USER + '/'
+projects = [p for p in all_member if (p.get('path_with_namespace') or '').startswith(_user_ns)]
+_contrib = [p for p in all_member if not (p.get('path_with_namespace') or '').startswith(_user_ns)]
+print(f'  {len(projects)} owned + {len(_contrib)} contributed = {len(all_member)} total', flush=True)
 total_stars = sum(p.get('star_count', 0) for p in projects)
 total_forks = sum(p.get('forks_count', 0) for p in projects)
 
@@ -228,36 +234,10 @@ today = datetime.now(timezone.utc).date()
 project_ids = {p['id'] for p in projects}
 repo_name_by_pid = {p['id']: (p.get('name') or p.get('path') or f'project-{p["id"]}') for p in projects}
 path_ns_by_pid  = {p['id']: p.get('path_with_namespace', '') for p in projects}
-try:
-    contributed_api = gl_get(f'/users/{USER_ID}/contributed_projects', paginate=True) or []
-    for cp in contributed_api:
-        project_ids.add(cp['id'])
-        repo_name_by_pid.setdefault(cp['id'], cp.get('name') or cp.get('path') or f'project-{cp["id"]}')
-        path_ns_by_pid.setdefault(cp['id'], cp.get('path_with_namespace', ''))
-    print(f'  contributed_projects API added {len(contributed_api)} project entries', flush=True)
-except Exception as _e:
-    print(f'  contributed_projects API failed: {_e}', flush=True)
-
-# Fallback: hardcoded contributed repos that the CI token can't discover via
-# /users/{id}/contributed_projects (needs read_user scope). Look them up by path.
-FALLBACK_CONTRIBUTED = [
-    'occultmcc1/Zelesis_AI_Neo',
-    'zenham-group/zenham-project',
-]
-for pns in FALLBACK_CONTRIBUTED:
-    if any(v == pns for v in path_ns_by_pid.values()):
-        continue  # already discovered via API
-    try:
-        p = gl_get(f'/projects/{urllib.parse.quote(pns, safe="")}')
-    except Exception as _e:
-        print(f'  fallback contributed lookup failed for {pns}: {_e}', flush=True)
-        continue
-    if p and 'id' in p:
-        pid = p['id']
-        project_ids.add(pid)
-        repo_name_by_pid.setdefault(pid, p.get('name') or p.get('path') or pns.split('/')[-1])
-        path_ns_by_pid.setdefault(pid, pns)
-        print(f'  fallback contributed added: {pns} (pid={pid})', flush=True)
+for cp in _contrib:
+    project_ids.add(cp['id'])
+    repo_name_by_pid.setdefault(cp['id'], cp.get('name') or cp.get('path') or f'project-{cp["id"]}')
+    path_ns_by_pid.setdefault(cp['id'], cp.get('path_with_namespace', ''))
 
 # Author email filter — user's commits could be authored by either the
 # old zen-ham email or the new zenham email
