@@ -9,7 +9,7 @@ Widgets:
   widgets/activity.svg  - line chart of events/day for last 90 days
   widgets/snake.svg     - 53x7 contribution grid
 """
-import os, sys, json, urllib.request, urllib.error, time, math
+import os, sys, json, urllib.request, urllib.error, urllib.parse, time, math
 from datetime import datetime, timedelta, timezone
 from collections import defaultdict, Counter
 
@@ -197,23 +197,26 @@ total_stars = sum(p.get('star_count', 0) for p in projects)
 total_forks = sum(p.get('forks_count', 0) for p in projects)
 
 # Aggregate languages: bytes_for_lang = sum over repos of (repo_size * lang_pct/100)
-# Used by "most used languages" widget only. Per-commit language attribution is done later
-# via `git log --numstat` on cloned repos (faster + accurate + gives API a break).
+# If statistics scope is missing (repo_size=0), fall back to equal-weight per repo so the
+# widget still shows a meaningful distribution.
 print('  fetching per-repo languages...', flush=True)
 lang_bytes = defaultdict(float)
+_langs_missing_stats = 0
 for p in projects:
     pid = p['id']
     size = (p.get('statistics') or {}).get('repository_size') or 0
-    if size <= 0: continue
     try:
         langs = gl_get(f'/projects/{pid}/languages')  # {Lang: pct}
     except Exception:
         continue
     if not langs: continue
+    if size <= 0:
+        _langs_missing_stats += 1
+        size = 1_000_000  # fallback weight so this repo contributes equally
     for lang, pct in langs.items():
         lang_bytes[lang] += size * (pct / 100.0)
 total_lang_bytes = sum(lang_bytes.values()) or 1
-print(f'  {len(lang_bytes)} distinct languages, {int(total_lang_bytes):,} bytes total', flush=True)
+print(f'  {len(lang_bytes)} distinct languages, {int(total_lang_bytes):,} bytes total ({_langs_missing_stats} repos used fallback weight)', flush=True)
 
 # Per-commit fetch across owned + contributed-to projects (so commits to collaborator
 # repos like OccultMC/Zelesis_AI_Neo also count). Unlocks pre-account-creation history
@@ -234,6 +237,27 @@ try:
     print(f'  contributed_projects API added {len(contributed_api)} project entries', flush=True)
 except Exception as _e:
     print(f'  contributed_projects API failed: {_e}', flush=True)
+
+# Fallback: hardcoded contributed repos that the CI token can't discover via
+# /users/{id}/contributed_projects (needs read_user scope). Look them up by path.
+FALLBACK_CONTRIBUTED = [
+    'occultmcc1/Zelesis_AI_Neo',
+    'zenham-group/zenham-project',
+]
+for pns in FALLBACK_CONTRIBUTED:
+    if any(v == pns for v in path_ns_by_pid.values()):
+        continue  # already discovered via API
+    try:
+        p = gl_get(f'/projects/{urllib.parse.quote(pns, safe="")}')
+    except Exception as _e:
+        print(f'  fallback contributed lookup failed for {pns}: {_e}', flush=True)
+        continue
+    if p and 'id' in p:
+        pid = p['id']
+        project_ids.add(pid)
+        repo_name_by_pid.setdefault(pid, p.get('name') or p.get('path') or pns.split('/')[-1])
+        path_ns_by_pid.setdefault(pid, pns)
+        print(f'  fallback contributed added: {pns} (pid={pid})', flush=True)
 
 # Author email filter — user's commits could be authored by either the
 # old zen-ham email or the new zenham email
