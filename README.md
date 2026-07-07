@@ -72,6 +72,8 @@ Some of my other Python packages I've released along the way:
 
 - [![lite](https://img.shields.io/badge/GitHub-Zhmiscellanylite-blue?logo=github)](https://gitlab.com/zenham/zhmiscellanylite) [![lite-dl](https://static.pepy.tech/badge/zhmiscellanylite)](https://pypi.org/project/zhmiscellanylite/) [![lite-stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellanylite?style=social)](https://gitlab.com/zenham/zhmiscellanylite), a smaller, server-focused version of zhmiscellany. Same kind of utilities but without the heavy deps, great for thin VMs and Docker images.
 
+- [![memfile-badge](https://img.shields.io/badge/GitHub-Memfile-blue?logo=github)](https://gitlab.com/zenham/memfile) [![memfile-dl](https://static.pepy.tech/badge/memfile)](https://pypi.org/project/memfile/) [![memfile-stars](https://img.shields.io/gitlab/stars/zenham/memfile?style=social)](https://gitlab.com/zenham/memfile), an easy RAM disk for Windows. Spin up an in-memory volume in milliseconds and get a real file path that any app can read and write, drop a file in and open it in VLC or whatever, then destroy the whole volume instantly. Zero disk writes, no format step, and it auto-installs the WinFsp driver on first use so it just works. Native Rust + PyO3, single abi3 wheel covering Python 3.9 through 3.13+.
+
 dead_cut
 
 ---
