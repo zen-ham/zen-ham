@@ -1,16 +1,20 @@
-# Daily widget regeneration for the profile readme.
+# Daily jobs for the profile.
 #
-# Fires on:
+# Both jobs fire on:
 #   - pipeline schedule (set up via gitlab API or Settings -> CI/CD -> Schedules)
 #   - manual web trigger (for ad-hoc re-runs)
-# NOT on regular master push (to avoid commit loops since we push back to master)
+# NOT on regular master push (to avoid commit loops).
 #
-# REQUIRED CI/CD VARIABLE: set WIDGETS_TOKEN at:
-#   gitlab.com/zenham/zenham/-/settings/ci_cd  ->  Variables -> Add
-#   key:   WIDGETS_TOKEN
-#   value: a gitlab personal access token (or project access token) with
-#          api + write_repository scopes
-#   flags: Protected (off), Masked (on), Hidden (on)
+# REQUIRED CI/CD VARIABLES (set at gitlab.com/zenham/zenham/-/settings/ci_cd -> Variables):
+#
+#   WIDGETS_TOKEN   gitlab PAT, scopes: api + read_repository + write_repository
+#                   used by both generate_widgets and mirror_reconcile
+#   GH_MIRROR_TOKEN github PAT, scopes: repo + delete_repo
+#                   used by mirror_reconcile; embedded in every push-mirror URL
+#
+# Both flagged Protected off, Masked on, Hidden on.
+#
+# Full mirroring architecture: MIRRORING.md at repo root.
 
 generate_widgets:
   image: python:3.12-slim
@@ -37,3 +41,13 @@ generate_widgets:
     paths:
       - assets/widgets/
     expire_in: 7 days
+
+mirror_reconcile:
+  image: python:3.12-slim
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $CI_PIPELINE_SOURCE == "web"
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq --no-install-recommends git ca-certificates >/dev/null
+  script:
+    - GITLAB_TOKEN="$WIDGETS_TOKEN" GH_TOKEN="$GH_MIRROR_TOKEN" python assets/mirror_reconcile.py
