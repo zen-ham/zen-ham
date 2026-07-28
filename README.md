@@ -52,7 +52,7 @@ I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-
 <h2>Side projects</h2>
 </div>
 
-Python packages
+### Python packages
 
 ---
 
@@ -74,7 +74,7 @@ Some of my other Python packages I've released along the way:
 
 - [![memfile-badge](https://img.shields.io/badge/GitHub-Memfile-blue?logo=github)](https://gitlab.com/zenham/memfile) [![memfile-dl](https://static.pepy.tech/badge/memfile)](https://pypi.org/project/memfile/) [![memfile-stars](https://img.shields.io/gitlab/stars/zenham/memfile?style=social)](https://gitlab.com/zenham/memfile), an easy RAM disk for Windows. Can spin up an in-memory volume in milliseconds and get a real file path that any app can read and write, put a file in and open it in VLC or whatever, then destroy the whole volume instantly. Zero disk writes, no format step, and it auto-installs the WinFsp driver on first use so it just works. Native Rust + PyO3, single abi3 wheel covering Python 3.9-3.13+.
 
-dead_cut
+### dead_cut
 
 ---
 
@@ -84,13 +84,13 @@ dead_cut
 
 I built [![dc-badge](https://img.shields.io/badge/GitHub-Dead_cut-blue?logo=github)](https://gitlab.com/zenham/dead_cut) [![dc-stars](https://img.shields.io/gitlab/stars/zenham/dead_cut?style=social)](https://gitlab.com/zenham/dead_cut), an automated YouTube vod editor. Hand it a long stream or vod and it gives you back just the entertaining bits, fully hands off. A 1h25 vod cuts to ~11 mins end to end in 2m17s on my gtx 1660 ti. Two layer system, the AI does the macro scale cuts (100+ edits per long vod) and an algorithmic silence pass handles the micro pacing inside what's kept, so the output actually feels like a well edited youtube video and not just a chopped down vod. Runs on a free OpenRouter model, no API costs ever.
 
-Github profile page effects
+### Github profile page effects
 
 ---
 
 I made a custom profile renderer for github that did fun visual stuff (https://api.zelesis.com/github-zen-ham). With my github account now hidden the renderer is offline; a gitlab equivalent is on the todo list.
 
-Open source week
+### Open source week
 
 ---
 
@@ -175,7 +175,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
 <h2>Stats / Socials</h2>
 </div>
 
-A bit about me
+### A bit about me
 
 ---
 
@@ -219,7 +219,7 @@ What I use
 </div>
 </td></tr></table>
 
-Stats
+### Stats
 
 ---
 
@@ -245,7 +245,7 @@ Stats
   <img width="99" height="20" src="https://img.shields.io/youtube/channel/views/UCelBff-qsw9Rbnkze9nAVrQ?style=social">
 </div>
 
-Contact
+### Contact
 
 ---
 
