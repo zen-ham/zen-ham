@@ -40,7 +40,7 @@ Here's some live updating graphs to show the userbase of my software at Zelesis:
 
 ---
 
-I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service (our AI is a model we trained with data we gathered ourselves, not an LLM or slop like that) that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. Upload a photo and it pinpoints the exact location, and it works pretty much anywhere on earth. Random photo of some town in australia and it gets the exact address. I also released a Python wrapper for the API, [pygeoaxis](https://gitlab.com/zenham/pygeoaxis), so you can hit it programmatically.
+I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-blue)](https://geoaxis.ai/), an AI powered geolocation service (our AI is a model we trained with data we gathered ourselves, not an LLM or slop like that) that figures out where any photo was taken just from the image itself, no GPS, no EXIF, no metadata, just whatever's visible in the picture. Upload a photo and it pinpoints the exact location, and it works pretty much anywhere on earth. Random photo of some town in australia and it gets the exact address. I also released a Python wrapper for the API, [pygeoaxis](https://github.com/zen-ham/pygeoaxis), so you can hit it programmatically.
 
 <div align="center">
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/geoaxis_dashboard.png" alt="GeoAxis dashboard preview" width="100%" />
@@ -56,23 +56,23 @@ I'm additionally part owner in [![gabadge](https://img.shields.io/badge/GeoAxis-
 
 ---
 
-I've been actively developing my Python package [![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://gitlab.com/zenham/zhmiscellany) [![PyPI Downloads](https://static.pepy.tech/badge/zhmiscellany)](https://gitlab.com/zenham/zhmiscellany) [![stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellany?style=social)](https://gitlab.com/zenham/zhmiscellany) for over 3 years. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30, I personally use it in practically 100% of the Python scripts I write.
+I've been actively developing my Python package [![zhmiscellanybadge](https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github)](https://github.com/zen-ham/zhmiscellany) [![PyPI Downloads](https://static.pepy.tech/badge/zhmiscellany)](https://github.com/zen-ham/zhmiscellany) [![stars](https://img.shields.io/github/stars/zen-ham/zhmiscellany?style=social)](https://github.com/zen-ham/zhmiscellany) for over 3 years. The main goal of this package is to keep as much helpful functionality in one place as possible, a python toolbox filled with utilities that can take a 300 line script to 30, I personally use it in practically 100% of the Python scripts I write.
 
 Some of my other Python packages I've released along the way:
 
-- [![rustcam-badge](https://img.shields.io/badge/GitHub-Rustcam-blue?logo=github)](https://gitlab.com/zenham/rustcam) [![rustcam-dl](https://static.pepy.tech/badge/rustcam)](https://pypi.org/project/rustcam/) [![rustcam-stars](https://img.shields.io/gitlab/stars/zenham/rustcam?style=social)](https://gitlab.com/zenham/rustcam), Rust-backed DXGI Desktop Duplication screen capture for Windows. Same idea as bettercam but the AcquireNextFrame loop runs in native Rust with the GIL released, so it actually rides the compositor refresh instead of stalling at ~140 fps. Ships a single abi3 wheel that covers Python 3.9 through 3.13+. Available on PyPI as both `rustcam` and the shorter `bestcam`.
+- [![rustcam-badge](https://img.shields.io/badge/GitHub-Rustcam-blue?logo=github)](https://github.com/zen-ham/rustcam) [![rustcam-dl](https://static.pepy.tech/badge/rustcam)](https://pypi.org/project/rustcam/) [![rustcam-stars](https://img.shields.io/github/stars/zen-ham/rustcam?style=social)](https://github.com/zen-ham/rustcam), Rust-backed DXGI Desktop Duplication screen capture for Windows. Same idea as bettercam but the AcquireNextFrame loop runs in native Rust with the GIL released, so it actually rides the compositor refresh instead of stalling at ~140 fps. Ships a single abi3 wheel that covers Python 3.9 through 3.13+. Available on PyPI as both `rustcam` and the shorter `bestcam`.
 
-- [![zpaq-badge](https://img.shields.io/badge/GitHub-Zpaq-blue?logo=github)](https://gitlab.com/zenham/zpaq) [![zpaq-dl](https://static.pepy.tech/badge/zpaq)](https://pypi.org/project/zpaq/) [![zpaq-stars](https://img.shields.io/gitlab/stars/zenham/zpaq?style=social)](https://gitlab.com/zenham/zpaq), real in-memory ZPAQ compression bindings for Python. Up to 6× faster than the official `zpaq.exe` CLI thanks to multi-threaded compress + decompress, JIT, libsais, and AVX2; ships prebuilt wheels for Win/Linux/macOS so installing it never needs a C++ toolchain.
+- [![zpaq-badge](https://img.shields.io/badge/GitHub-Zpaq-blue?logo=github)](https://github.com/zen-ham/zpaq) [![zpaq-dl](https://static.pepy.tech/badge/zpaq)](https://pypi.org/project/zpaq/) [![zpaq-stars](https://img.shields.io/github/stars/zen-ham/zpaq?style=social)](https://github.com/zen-ham/zpaq), real in-memory ZPAQ compression bindings for Python. Up to 6× faster than the official `zpaq.exe` CLI thanks to multi-threaded compress + decompress, JIT, libsais, and AVX2; ships prebuilt wheels for Win/Linux/macOS so installing it never needs a C++ toolchain.
 
-- [![pygeo](https://img.shields.io/badge/GitHub-Pygeoaxis-blue?logo=github)](https://gitlab.com/zenham/pygeoaxis) [![pygeo-dl](https://static.pepy.tech/badge/pygeoaxis)](https://pypi.org/project/pygeoaxis/) [![pygeo-stars](https://img.shields.io/gitlab/stars/zenham/pygeoaxis?style=social)](https://gitlab.com/zenham/pygeoaxis), a Python wrapper for the GeoAxis API, to instantly find the exact geographic location for any image.
+- [![pygeo](https://img.shields.io/badge/GitHub-Pygeoaxis-blue?logo=github)](https://github.com/zen-ham/pygeoaxis) [![pygeo-dl](https://static.pepy.tech/badge/pygeoaxis)](https://pypi.org/project/pygeoaxis/) [![pygeo-stars](https://img.shields.io/github/stars/zen-ham/pygeoaxis?style=social)](https://github.com/zen-ham/pygeoaxis), a Python wrapper for the GeoAxis API, to instantly find the exact geographic location for any image.
 
-- [![gsudo-badge](https://img.shields.io/badge/GitHub-Gsudo-blue?logo=github)](https://gitlab.com/zenham/zhmiscellanygsudo) [![gsudo-dl](https://static.pepy.tech/badge/gsudo)](https://pypi.org/project/gsudo/) [![gsudo-stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellanygsudo?style=social)](https://gitlab.com/zenham/zhmiscellanygsudo), a wrapper around [gsudo](https://github.com/gerardog/gsudo) that lets a Python script re-run itself as admin (or even SYSTEM / TrustedInstaller on Windows) while keeping the same console window. Available on PyPI as both `zhmiscellanygsudo` and the shorter `gsudo`.
+- [![gsudo-badge](https://img.shields.io/badge/GitHub-Gsudo-blue?logo=github)](https://github.com/zen-ham/zhmiscellanygsudo) [![gsudo-dl](https://static.pepy.tech/badge/gsudo)](https://pypi.org/project/gsudo/) [![gsudo-stars](https://img.shields.io/github/stars/zen-ham/zhmiscellanygsudo?style=social)](https://github.com/zen-ham/zhmiscellanygsudo), a wrapper around [gsudo](https://github.com/gerardog/gsudo) that lets a Python script re-run itself as admin (or even SYSTEM / TrustedInstaller on Windows) while keeping the same console window. Available on PyPI as both `zhmiscellanygsudo` and the shorter `gsudo`.
 
-- [![ocr](https://img.shields.io/badge/GitHub-Zhmiscellanyocr-blue?logo=github)](https://gitlab.com/zenham/zhmiscellanyocr) [![ocr-dl](https://static.pepy.tech/badge/zhmiscellanyocr)](https://pypi.org/project/zhmiscellanyocr/) [![ocr-stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellanyocr?style=social)](https://gitlab.com/zenham/zhmiscellanyocr), OCR (image text recognition) utilities I split out of the main package so projects that just want OCR don't have to pull in everything.
+- [![ocr](https://img.shields.io/badge/GitHub-Zhmiscellanyocr-blue?logo=github)](https://github.com/zen-ham/zhmiscellanyocr) [![ocr-dl](https://static.pepy.tech/badge/zhmiscellanyocr)](https://pypi.org/project/zhmiscellanyocr/) [![ocr-stars](https://img.shields.io/github/stars/zen-ham/zhmiscellanyocr?style=social)](https://github.com/zen-ham/zhmiscellanyocr), OCR (image text recognition) utilities I split out of the main package so projects that just want OCR don't have to pull in everything.
 
-- [![lite](https://img.shields.io/badge/GitHub-Zhmiscellanylite-blue?logo=github)](https://gitlab.com/zenham/zhmiscellanylite) [![lite-dl](https://static.pepy.tech/badge/zhmiscellanylite)](https://pypi.org/project/zhmiscellanylite/) [![lite-stars](https://img.shields.io/gitlab/stars/zenham/zhmiscellanylite?style=social)](https://gitlab.com/zenham/zhmiscellanylite), a smaller, server-focused version of zhmiscellany. Same kind of utilities but without the heavy deps, great for thin VMs and Docker images. I use it for the latter alot.
+- [![lite](https://img.shields.io/badge/GitHub-Zhmiscellanylite-blue?logo=github)](https://github.com/zen-ham/zhmiscellanylite) [![lite-dl](https://static.pepy.tech/badge/zhmiscellanylite)](https://pypi.org/project/zhmiscellanylite/) [![lite-stars](https://img.shields.io/github/stars/zen-ham/zhmiscellanylite?style=social)](https://github.com/zen-ham/zhmiscellanylite), a smaller, server-focused version of zhmiscellany. Same kind of utilities but without the heavy deps, great for thin VMs and Docker images. I use it for the latter alot.
 
-- [![memfile-badge](https://img.shields.io/badge/GitHub-Memfile-blue?logo=github)](https://gitlab.com/zenham/memfile) [![memfile-dl](https://static.pepy.tech/badge/memfile)](https://pypi.org/project/memfile/) [![memfile-stars](https://img.shields.io/gitlab/stars/zenham/memfile?style=social)](https://gitlab.com/zenham/memfile), an easy RAM disk for Windows. Can spin up an in-memory volume in milliseconds and get a real file path that any app can read and write, put a file in and open it in VLC or whatever, then destroy the whole volume instantly. Zero disk writes, no format step, and it auto-installs the WinFsp driver on first use so it just works. Native Rust + PyO3, single abi3 wheel covering Python 3.9-3.13+.
+- [![memfile-badge](https://img.shields.io/badge/GitHub-Memfile-blue?logo=github)](https://github.com/zen-ham/memfile) [![memfile-dl](https://static.pepy.tech/badge/memfile)](https://pypi.org/project/memfile/) [![memfile-stars](https://img.shields.io/github/stars/zen-ham/memfile?style=social)](https://github.com/zen-ham/memfile), an easy RAM disk for Windows. Can spin up an in-memory volume in milliseconds and get a real file path that any app can read and write, put a file in and open it in VLC or whatever, then destroy the whole volume instantly. Zero disk writes, no format step, and it auto-installs the WinFsp driver on first use so it just works. Native Rust + PyO3, single abi3 wheel covering Python 3.9-3.13+.
 
 ### dead_cut
 
@@ -82,7 +82,7 @@ Some of my other Python packages I've released along the way:
   <img src="https://gitlab.com/zenham/zenham/-/raw/master/assets/deadcut_logo.png" alt="dead_cut" width="80%" />
 </div>
 
-I built [![dc-badge](https://img.shields.io/badge/GitHub-Dead_cut-blue?logo=github)](https://gitlab.com/zenham/dead_cut) [![dc-stars](https://img.shields.io/gitlab/stars/zenham/dead_cut?style=social)](https://gitlab.com/zenham/dead_cut), an automated YouTube vod editor. Hand it a long stream or vod and it gives you back just the entertaining bits, fully hands off. A 1h25 vod cuts to ~11 mins end to end in 2m17s on my gtx 1660 ti. Two layer system, the AI does the macro scale cuts (100+ edits per long vod) and an algorithmic silence pass handles the micro pacing inside what's kept, so the output actually feels like a well edited youtube video and not just a chopped down vod. Runs on a free OpenRouter model, no API costs ever.
+I built [![dc-badge](https://img.shields.io/badge/GitHub-Dead_cut-blue?logo=github)](https://github.com/zen-ham/dead_cut) [![dc-stars](https://img.shields.io/github/stars/zen-ham/dead_cut?style=social)](https://github.com/zen-ham/dead_cut), an automated YouTube vod editor. Hand it a long stream or vod and it gives you back just the entertaining bits, fully hands off. A 1h25 vod cuts to ~11 mins end to end in 2m17s on my gtx 1660 ti. Two layer system, the AI does the macro scale cuts (100+ edits per long vod) and an algorithmic silence pass handles the micro pacing inside what's kept, so the output actually feels like a well edited youtube video and not just a chopped down vod. Runs on a free OpenRouter model, no API costs ever.
 
 ### Github profile page effects
 
@@ -95,7 +95,7 @@ I made a custom profile renderer for github that did fun visual stuff (https://a
 ---
 
 <div align="center" style="margin: 20px 0;">
-  <a href="https://gitlab.com/zenham/zenham#open-source-week" style="text-decoration: none;">
+  <a href="https://github.com/zen-ham/zen-ham#open-source-week" style="text-decoration: none;">
     <img
       src="https://img.shields.io/badge/Open_Source_Week-white?logo=opensourceinitiative"
       alt="Open Source Week"
@@ -115,7 +115,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <tr>
     <td align="center"><b>Day 1</b></td>
     <td>
-      <a href="https://gitlab.com/zenham/zhmiscellany"><img src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="Zhmiscellany"></a>
+      <a href="https://github.com/zen-ham/zhmiscellany"><img src="https://img.shields.io/badge/GitHub-Zhmiscellany-blue?logo=github" alt="Zhmiscellany"></a>
       <p><small>Updated documentation for my Python package and improved my workflow to maintain it.</small></p>
     </td>
     <td>
@@ -126,7 +126,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <tr>
     <td align="center"><b>Day 2</b></td>
     <td>
-      <a href="https://gitlab.com/zenham/garrysmod_workshop_scripts"><img src="https://img.shields.io/badge/GitHub-GarrysMod_Workshop_Scripts-blue?logo=github" alt="Garry's Mod Workshop Scripts"></a>
+      <a href="https://github.com/zen-ham/garrysmod_workshop_scripts"><img src="https://img.shields.io/badge/GitHub-GarrysMod_Workshop_Scripts-blue?logo=github" alt="Garry's Mod Workshop Scripts"></a>
       <p><small>Refined and released my collection of Garry's Mod scripts with improved usability.</small></p>
     </td>
     <td>
@@ -137,7 +137,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <tr>
     <td align="center"><b>Day 3</b></td>
     <td>
-      <a href="https://gitlab.com/zenham/tales_of_zenmania_2"><img src="https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github" alt="Tales of Zenmania 2"></a>
+      <a href="https://github.com/zen-ham/tales_of_zenmania_2"><img src="https://img.shields.io/badge/GitHub-Tales_of_Zenmania_2-blue?logo=github" alt="Tales of Zenmania 2"></a>
       <p><small>My own version of Tales of Zenmania with new game mechanics and an expansive story.</small></p>
     </td>
     <td>
@@ -148,7 +148,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <tr>
     <td align="center"><b>Day 4</b></td>
     <td>
-      <a href="https://gitlab.com/zenham/local_llm_agent"><img src="https://img.shields.io/badge/GitHub-Local_LLM_Agent-blue?logo=github" alt="Local LLM Agent"></a>
+      <a href="https://github.com/zen-ham/local_llm_agent"><img src="https://img.shields.io/badge/GitHub-Local_LLM_Agent-blue?logo=github" alt="Local LLM Agent"></a>
       <p><small>A local LLM agent that allows AI models to perform tasks on your PC.</small></p>
     </td>
     <td>
@@ -159,7 +159,7 @@ Me and a friend Apollo have been doing our own version of Deepseek's "Open Sourc
   <tr>
     <td align="center"><b>Day 5</b></td>
     <td>
-      <a href="https://gitlab.com/zenham/Search-OCR"><img src="https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github" alt="Search OCR"></a>
+      <a href="https://github.com/zen-ham/Search-OCR"><img src="https://img.shields.io/badge/GitHub-Search_OCR-blue?logo=github" alt="Search OCR"></a>
       <p><small>An image OCR and search engine tool for finding text within images on your PC.</small></p>
     </td>
     <td>
