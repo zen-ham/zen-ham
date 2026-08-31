@@ -14,6 +14,12 @@
 #
 # Both flagged Protected off, Masked on, Hidden on.
 #
+# OPTIONAL RUN-TIME VARIABLE (add on the "Run pipeline" page, not stored in settings):
+#
+#   ROTATE_MIRRORS=1  makes mirror_reconcile delete + recreate every github push mirror
+#                     so each URL picks up the current GH_MIRROR_TOKEN. Run once after
+#                     rotating that PAT. See MIRRORING.md -> "Rotating GH_MIRROR_TOKEN".
+#
 # Full mirroring architecture: MIRRORING.md at repo root.
 
 generate_widgets:

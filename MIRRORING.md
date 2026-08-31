@@ -52,20 +52,18 @@ Flags to use: Protected off (schedules aren't from a protected branch necessaril
 
 ### Rotating GH_MIRROR_TOKEN
 
-Because the github token is embedded in every push-mirror URL, rotating means updating N URLs.
+Because the github token is embedded in every push-mirror URL, rotating means updating N URLs. The reconciler does this for you now.
 
 1. Create a new github PAT at `github.com/settings/tokens/new` with scopes `repo` + `delete_repo`
 2. Update `GH_MIRROR_TOKEN` in gitlab CI/CD variables with the new value
-3. Manually trigger the scheduled pipeline (`gitlab.com/zenham/zenham/-/pipeline_schedules` → Play) — the reconciler re-adds mirror URLs where missing. **But existing URLs are NOT auto-updated with the new token**; see next step.
-4. To force-refresh existing URLs: for each repo, `DELETE /projects/:pid/remote_mirrors/:mirror_id` then let the reconciler POST a fresh one with the new token. Quick script:
-   ```bash
-   for pid in $(curl -s -H "PRIVATE-TOKEN: $GL" 'https://gitlab.com/api/v4/projects?membership=true&per_page=100' | jq -r '.[] | select(.path_with_namespace | startswith("zenham/")) | .id'); do
-     mid=$(curl -s -H "PRIVATE-TOKEN: $GL" "https://gitlab.com/api/v4/projects/$pid/remote_mirrors" | jq -r '.[] | select(.url | contains("github.com")) | .id')
-     [ -n "$mid" ] && curl -s -X DELETE -H "PRIVATE-TOKEN: $GL" "https://gitlab.com/api/v4/projects/$pid/remote_mirrors/$mid"
-   done
-   # then trigger the scheduled pipeline; reconciler adds them back with the new token
-   ```
-5. Revoke old token at `github.com/settings/tokens`
+3. Run the pipeline once **with `ROTATE_MIRRORS` set to `1`**: `gitlab.com/zenham/zenham/-/pipelines/new` → add variable `ROTATE_MIRRORS` = `1` → Run. The reconciler deletes and re-POSTs every github mirror so each URL carries the new token. Lines tagged `[mir~]` in the log are the rotated ones.
+4. Revoke old token at `github.com/settings/tokens`
+
+Notes:
+
+- Step 3 matters even for repos that look healthy. Gitlab's remote-mirror API has **no way to update an existing mirror's `url`** (the `PUT` endpoint accepts `enabled`, `auth_method`, `keep_divergent_refs`, etc. but not `url`), so delete + re-create is the only route. A mirror that hasn't been pushed to since the rotation still reports `update_status: finished` while holding the dead token; it only fails on the next real push.
+- Ordinary daily runs (no `ROTATE_MIRRORS`) self-heal any mirror whose last run failed with an auth error, so a missed rotation gets repaired within 24h of the first failing push.
+- If the token is dead, the job now aborts immediately with a `FATAL: github auth failed` message naming this section, instead of crashing deeper in with a confusing `TypeError`.
 
 ## Excluding a repo from mirror
 
@@ -123,4 +121,5 @@ Push mirrors are additive — a gitlab repo can have N mirror targets simultaneo
 - **Push mirror not real-time on gitlab free tier?** Sometimes lags 1-5 min. If instant is needed, `git push` directly to both remotes.
 - **Force-push on gitlab is force-mirrored to github.** This is the intended behavior but destroys any commits made directly to github. Don't commit directly to github; it's a mirror.
 - **A gitlab repo made minutes before the reconciler run** gets provisioned that same run. A repo made minutes after has to wait ~24h. Kick the schedule manually if urgent.
-- **Existing push-mirror URLs keep their old token forever** unless deleted + recreated. Rotation flow in the tokens section covers this.
+- **Existing push-mirror URLs keep their old token forever** unless deleted + recreated. Rotation flow in the tokens section covers this (`ROTATE_MIRRORS=1`).
+- **An expired github PAT breaks the whole rig silently.** Push mirrors just start failing server-side; nothing emails you about it. The daily reconciler is the tripwire: it warns when the PAT is within 14 days of expiry and fails loudly once it's dead. Classic PATs with an expiry date are the usual culprit; a no-expiry PAT or a fine-grained PAT with a long window avoids the repeat.
