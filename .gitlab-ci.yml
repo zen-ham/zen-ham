@@ -3,6 +3,8 @@
 # Both jobs fire on:
 #   - pipeline schedule (set up via gitlab API or Settings -> CI/CD -> Schedules)
 #   - manual web trigger (for ad-hoc re-runs)
+#   - api trigger, i.e. POST /projects/:id/pipeline (scriptable re-runs, lets you pass
+#     one-off variables like ROTATE_MIRRORS without editing the schedule)
 # NOT on regular master push (to avoid commit loops).
 #
 # REQUIRED CI/CD VARIABLES (set at gitlab.com/zenham/zenham/-/settings/ci_cd -> Variables):
@@ -27,6 +29,7 @@ generate_widgets:
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
     - if: $CI_PIPELINE_SOURCE == "web"
+    - if: $CI_PIPELINE_SOURCE == "api"
   before_script:
     - apt-get update -qq && apt-get install -y -qq --no-install-recommends git >/dev/null
   variables:
@@ -53,6 +56,7 @@ mirror_reconcile:
   rules:
     - if: $CI_PIPELINE_SOURCE == "schedule"
     - if: $CI_PIPELINE_SOURCE == "web"
+    - if: $CI_PIPELINE_SOURCE == "api"
   before_script:
     - apt-get update -qq && apt-get install -y -qq --no-install-recommends git ca-certificates >/dev/null
   script:
