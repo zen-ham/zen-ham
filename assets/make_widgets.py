@@ -239,9 +239,41 @@ for cp in _contrib:
     repo_name_by_pid.setdefault(cp['id'], cp.get('name') or cp.get('path') or f'project-{cp["id"]}')
     path_ns_by_pid.setdefault(cp['id'], cp.get('path_with_namespace', ''))
 
-# Author email filter — user's commits could be authored by either the
-# old zen-ham email or the new zenham email
-AUTHOR_EMAILS = {'again.really.plz@gmail.com', 'zenmastermagnet@gmail.com', 'roeganjoe47@gmail.com'}
+# ============ AUTHOR IDENTITY FILTER ============
+# Only the user's own commits belong in these widgets, and that has to hold for EVERY
+# repo, owned ones included. An owned repo still collects commits that aren't the
+# user's: collaborators, upstream history carried in by a fork (GameSaverRevived,
+# bypy, GamingChairLLC), and this very CI job, which pushes "ci: regenerate widgets"
+# to zenham/zenham as GitLab CI Widgets <ci@gitlab.com> once a day and would otherwise
+# mint a permanent fake commit streak.
+import re as _re
+
+AUTHOR_EMAILS = {
+    'again.really.plz@gmail.com',   # original account email
+    'zenmastermagnet@gmail.com',    # current account email
+    'roeganjoe47@gmail.com',        # older personal email
+}
+# Edits made through a web UI are authored as that host's per-user noreply address:
+#   <gitlab_user_id>-<username>@users.noreply.gitlab.com   (zenham,  id 39669031)
+#   <github_user_id>+<login>@users.noreply.github.com      (zen-ham, id 102807592)
+# Matched by pattern rather than pinned literally so a changed id keeps working.
+_NOREPLY_RE = _re.compile(
+    r'^\d+[-+](?:zenham|zen-ham)@users\.noreply\.(?:gitlab|github)\.com$', _re.I)
+# Placeholder address left by an unconfigured git install (zhmiscellany and
+# zhmiscellanyocr were committed this way). Trusted only inside repos the user owns,
+# because any stranger with a fresh git install authors under the exact same address.
+_PLACEHOLDER_EMAILS = {'youremail@example.com'}
+
+_foreign_authors = Counter()
+
+def is_user_commit(email, owned):
+    e = (email or '').strip().lower()
+    if e in AUTHOR_EMAILS or _NOREPLY_RE.match(e):
+        return True
+    if owned and e in _PLACEHOLDER_EMAILS:
+        return True
+    _foreign_authors[e] += 1
+    return False
 
 # ---- git-clone-based commit + language attribution ----
 # For each project: bare-clone, run `git log --all --numstat` in one call, parse locally.
@@ -312,7 +344,7 @@ for pid in project_ids:
         parts = head.split('|', 3)
         if len(parts) < 4: continue
         sha, iso, email, title = parts
-        if not is_owned and email.lower() not in AUTHOR_EMAILS:
+        if not is_user_commit(email, is_owned):
             continue
         try:
             dt = datetime.fromisoformat(iso)
@@ -350,6 +382,11 @@ for pid in project_ids:
             lang_commits['Other'] += 1
             lang_lines['Other']   += total_lines
 print(f'  {len(all_commits)} commits parsed in {int(_time.time()-_clone_start)}s', flush=True)
+if _foreign_authors:
+    _dropped = sum(_foreign_authors.values())
+    print(f'  excluded {_dropped} commits from {len(_foreign_authors)} other authors:', flush=True)
+    for _e, _n in _foreign_authors.most_common(15):
+        print(f'    {_n:6d}  {_e}', flush=True)
 total_commits = len(all_commits)
 total_contributions = sum(daily.values())
 
@@ -716,12 +753,20 @@ def render_bubbles(days=7, extra_past=1, time_label='this week'):
     since = week_start.strftime('%Y-%m-%d')
 
     commits = []
+    _skipped = 0
     for pid in contributed_projects:
         try:
             cs = gl_get(f'/projects/{pid}/repository/commits?since={since}&with_stats=true', paginate=True)
         except Exception:
             continue
+        _owned = pid in _owned_pids
         for c in cs:
+            # Same identity filter as the git-log pass above. This path reads the API
+            # directly instead of all_commits, so without this it happily draws other
+            # people's commits, including the daily ci@gitlab.com widget-regen commit.
+            if not is_user_commit(c.get('author_email'), _owned):
+                _skipped += 1
+                continue
             lines = (c.get('stats') or {}).get('total', 0)
             if lines <= 0: continue
             try:
@@ -747,7 +792,7 @@ def render_bubbles(days=7, extra_past=1, time_label='this week'):
                             'msg': (c.get('title','') or '')[:60],
                             'repo': repo_name_by_pid.get(pid, f'project-{pid}')})
     n_extra = sum(1 for c in commits if c['date'] < visible_start)
-    print(f'  bubbles: {len(commits)} commits in last {fetch_days} days ({n_extra} extra past for overflow effect)', flush=True)
+    print(f'  bubbles: {len(commits)} commits in last {fetch_days} days ({n_extra} extra past for overflow effect, {_skipped} skipped as other authors)', flush=True)
 
     def truncate_middle(s, max_chars):
         if len(s) <= max_chars: return s
